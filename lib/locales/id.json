@@ -1,0 +1,152 @@
+{
+  "hero": {
+    "tagline": "Visi Anda, Kode Kami",
+    "title": "Membangun Solusi Digital\nTanpa Kompromi.",
+    "description": "indevtech.id menghadirkan teknologi kelas dunia untuk bisnis yang ambisius. Kami menggabungkan arsitektur perangkat lunak yang solid dengan desain antarmuka yang memukau.",
+    "ctaProject": "Mulai Proyek",
+    "ctaPortfolio": "Karya Kami"
+  },
+  "services": {
+    "title": "Solusi Pengembangan Perangkat Lunak.",
+    "desc": "Solusi teknologi terintegrasi yang dirancang untuk efisiensi dan pertumbuhan bisnis Anda.",
+    "items": [
+      {
+        "title": "Digital & Corporate Web",
+        "desc": "Membangun kredibilitas melalui website profesional, landing page, dan company profile."
+      },
+      {
+        "title": "Business System & Apps",
+        "desc": "Sistem internal, CRM, dashboard, dan manajemen data untuk operasional yang efisien."
+      },
+      {
+        "title": "Custom & Integrations",
+        "desc": "Software kustom dan integrasi pihak ketiga (API, Payment, WA) sesuai kebutuhan unik."
+      },
+      {
+        "title": "Mobile Solutions",
+        "desc": "Aplikasi mobile (Android & iOS) untuk layanan digital pelanggan dan aktivitas internal."
+      },
+      {
+        "title": "Partnership & Support",
+        "desc": "Dukungan teknis jangka panjang, pemeliharaan sistem, dan konsultasi strategis."
+      }
+    ]
+  },
+  "aboutOwner": {
+    "title": "Di Balik indevtech.id",
+    "desc": "Halo, saya adalah pendiri di balik indevtech.id. Dengan pengalaman bertahun-tahun di industri perangkat lunak, saya membangun platform ini untuk menjembatani ide bisnis Anda dengan teknologi kelas dunia.",
+    "points": [
+      {
+        "title": "Inovasi Berkelanjutan",
+        "desc": "Selalu mengadopsi teknologi terbaru."
+      },
+      {
+        "title": "Fokus Hasil",
+        "desc": "Mengutamakan ROI dan efisiensi bisnis Anda."
+      }
+    ]
+  },
+  "orderProcess": {
+    "title": "Dari Ide Menjadi Kenyataan",
+    "desc": "Proses yang terstruktur, transparan, dan berorientasi pada hasil untuk memastikan kesuksesan proyek Anda.",
+    "steps": [
+      {
+        "step": "01",
+        "title": "Discovery",
+        "desc": "Konsultasi gratis untuk memahami visi, tantangan, dan target bisnis Anda."
+      },
+      {
+        "step": "02",
+        "title": "Strategy",
+        "desc": "Pemetaan solusi teknis, estimasi biaya, dan timeline yang transparan."
+      },
+      {
+        "step": "03",
+        "title": "Development",
+        "desc": "Proses pembangunan dengan update berkala dan standar kualitas tinggi."
+      },
+      {
+        "step": "04",
+        "title": "Launch & Growth",
+        "desc": "Peluncuran sistem yang aman diikuti dengan dukungan teknis berkelanjutan."
+      }
+    ],
+    "cta": "Hubungi Kami Sekarang",
+    "ctaDesc": "Jadwalkan konsultasi 30 menit gratis dengan tim ahli kami."
+  },
+  "projects": {
+    "title": "Karya Pilihan",
+    "desc": "Inovasi digital yang memberikan dampak nyata.",
+    "button": "Lihat Semua Portofolio",
+    "items": [
+      {
+        "title": "Lumina Enterprise",
+        "category": "Data Analytics Platform",
+        "img": "abstract analytics dashboard"
+      },
+      {
+        "title": "Vortex Fintech",
+        "category": "Next-gen Payment Gateway",
+        "img": "modern mobile banking app"
+      },
+      {
+        "title": "Aura Marketplace",
+        "category": "E-Commerce Experience",
+        "img": "luxury fashion ecommerce"
+      },
+      {
+        "title": "Nexus CRM",
+        "category": "Internal Operations System",
+        "img": "business management interface"
+      }
+    ]
+  },
+  "whyUs": {
+    "title": "Mengapa indevtech.id?",
+    "items": [
+      {
+        "title": "Kualitas Tanpa Kompromi",
+        "desc": "Setiap baris kode diuji secara ketat untuk memastikan keandalan maksimal bagi bisnis Anda."
+      },
+      {
+        "title": "Komunikasi Transparan",
+        "desc": "Kami percaya bahwa kolaborasi terbaik lahir dari kejujuran dan pembaruan rutin setiap langkah."
+      },
+      {
+        "title": "Fokus Masa Depan",
+        "desc": "Teknologi yang kami pilih dirancang untuk bertahan lama dan mudah dikembangkan seiring pertumbuhan Anda."
+      }
+    ]
+  },
+  "footer": {
+    "ctaTitle": "Mari mulai sesuatu yang luar biasa",
+    "ctaEmail": "Kirim Email",
+    "ctaWA": "WhatsApp Kami",
+    "office": "Kantor Pusat",
+    "contact": "Kontak Langsung",
+    "company": "Jakarta, Indonesia",
+    "email": "hello@indevtech.id",
+    "phone": "+62 (21) 1234 5678",
+    "navTitle": "Navigasi",
+    "navLinks": [
+      "Layanan",
+      "Proyek",
+      "Tentang Kami",
+      "Hubungi Kami"
+    ],
+    "socialTitle": "Ikuti Kami",
+    "socialLinks": [
+      "LinkedIn",
+      "Instagram",
+      "Dribbble",
+      "GitHub"
+    ],
+    "legalTitle": "Legal",
+    "legalLinks": [
+      "Privasi",
+      "Syarat & Ketentuan",
+      "Cookie Policy"
+    ],
+    "copyright": "© 2025 indevtech.id. Terdaftar di Indonesia."
+  }
+}

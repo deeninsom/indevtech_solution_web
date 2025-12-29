@@ -1,0 +1,152 @@
+{
+  "hero": {
+    "tagline": "Your Vision, Our Code",
+    "title": "Building Digital Solutions\nWithout Compromise.",
+    "description": "indevtech.id brings world-class technology for ambitious businesses. We combine solid software architecture with stunning interface design.",
+    "ctaProject": "Start Project",
+    "ctaPortfolio": "Our Works"
+  },
+  "services": {
+    "title": "Software Development Solutions.",
+    "desc": "Integrated technology solutions designed for efficiency and business growth.",
+    "items": [
+      {
+        "title": "Digital & Corporate Web",
+        "desc": "Building credibility through professional websites, landing pages, and company profiles."
+      },
+      {
+        "title": "Business System & Apps",
+        "desc": "Internal systems, CRM, dashboards, and data management for efficient operations."
+      },
+      {
+        "title": "Custom & Integrations",
+        "desc": "Custom software and third-party integrations (API, Payment, WA) to suit unique needs."
+      },
+      {
+        "title": "Mobile Solutions",
+        "desc": "Mobile apps (Android & iOS) for customer services and internal operations."
+      },
+      {
+        "title": "Partnership & Support",
+        "desc": "Long-term technical support, system maintenance, and strategic consulting."
+      }
+    ]
+  },
+  "aboutOwner": {
+    "title": "Behind indevtech.id",
+    "desc": "Hello, I am the founder behind indevtech.id. With years of software experience, I built this platform to bridge your business ideas with world-class technology.",
+    "points": [
+      {
+        "title": "Continuous Innovation",
+        "desc": "Always adopting the latest technologies."
+      },
+      {
+        "title": "Result Focused",
+        "desc": "Prioritizing ROI and your business efficiency."
+      }
+    ]
+  },
+  "orderProcess": {
+    "title": "From Idea to Reality",
+    "desc": "A structured, transparent, and results-oriented process to ensure your project's success.",
+    "steps": [
+      {
+        "step": "01",
+        "title": "Discovery",
+        "desc": "Free consultation to understand your vision, challenges, and business goals."
+      },
+      {
+        "step": "02",
+        "title": "Strategy",
+        "desc": "Technical solution mapping, cost estimation, and transparent timeline."
+      },
+      {
+        "step": "03",
+        "title": "Development",
+        "desc": "Building process with regular updates and high-quality standards."
+      },
+      {
+        "step": "04",
+        "title": "Launch & Growth",
+        "desc": "Safe system deployment followed by ongoing technical support."
+      }
+    ],
+    "cta": "Contact Us Now",
+    "ctaDesc": "Schedule a 30-minute free consultation with our expert team."
+  },
+  "projects": {
+    "title": "Selected Works",
+    "desc": "Digital innovations delivering real impact.",
+    "button": "View All Portfolio",
+    "items": [
+      {
+        "title": "Lumina Enterprise",
+        "category": "Data Analytics Platform",
+        "img": "abstract analytics dashboard"
+      },
+      {
+        "title": "Vortex Fintech",
+        "category": "Next-gen Payment Gateway",
+        "img": "modern mobile banking app"
+      },
+      {
+        "title": "Aura Marketplace",
+        "category": "E-Commerce Experience",
+        "img": "luxury fashion ecommerce"
+      },
+      {
+        "title": "Nexus CRM",
+        "category": "Internal Operations System",
+        "img": "business management interface"
+      }
+    ]
+  },
+  "whyUs": {
+    "title": "Why indevtech.id?",
+    "items": [
+      {
+        "title": "Uncompromising Quality",
+        "desc": "Every line of code is rigorously tested for maximum reliability."
+      },
+      {
+        "title": "Transparent Communication",
+        "desc": "We believe the best collaboration comes from honesty and regular updates."
+      },
+      {
+        "title": "Future-Focused",
+        "desc": "Technologies chosen to be long-lasting and easily scalable."
+      }
+    ]
+  },
+  "footer": {
+    "ctaTitle": "Let's Start Something Amazing",
+    "ctaEmail": "Send Email",
+    "ctaWA": "WhatsApp Us",
+    "office": "Head Office",
+    "contact": "Direct Contact",
+    "company": "Jakarta, Indonesia",
+    "email": "+ hello@indevtech.id",
+    "phone": "+62 (21) 1234 5678",
+    "navTitle": "Navigation",
+    "navLinks": [
+      "Services",
+      "Projects",
+      "About Us",
+      "Contact"
+    ],
+    "socialTitle": "Follow Us",
+    "socialLinks": [
+      "LinkedIn",
+      "Instagram",
+      "Dribbble",
+      "GitHub"
+    ],
+    "legalTitle": "Legal",
+    "legalLinks": [
+      "Privacy",
+      "Terms & Conditions",
+      "Cookie Policy"
+    ],
+    "copyright": "© 2025 indevtech.id. Registered in Indonesia."
+  }
+}
