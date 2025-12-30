@@ -38,143 +38,222 @@ const imageReveal: Variants = {
 
 // --- Data ---
 const clientLogos = [
-  { name: "TechCorp", url: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" },
-  { name: "Global OS", url: "https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" },
-  { name: "Nexus ID", url: "https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" },
-  { name: "Dataflow", url: "https://upload.wikimedia.org/wikipedia/commons/b/b1/Apple_logo_grey.svg" },
-  { name: "Cloudly", url: "https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" },
-  { name: "Vortex", url: "https://upload.wikimedia.org/wikipedia/commons/f/fa/Microsoft_logo.svg" }
+  { name: "PT Wibawa Jati Putra", url: "/partners/wjp-logo.jpeg" },
+  { name: "PT Yama Electrical Support", url: "/partners/yama-electrical.png" },
+  { name: "PT AMJ", url: "/partners/amj.jpeg" }
 ];
+
 const content = {
   id: {
     hero: {
-      badge: "Enterprise Technology Partner",
-      title: "Solusi Rekayasa Digital",
-      titleItalic: "Skala Global.",
-      desc: "Indev Tech Solutions menghadirkan ekosistem teknologi cerdas untuk bisnis modern. Kami membangun sistem yang skalabel, aman, dan berorientasi pada hasil nyata.",
-      btns: ["Konsultasi Gratis", "Lihat Solusi"]
+      badge: "Creative Tech Collective",
+      title: "Membangun Arsitektur",
+      titleItalic: "Masa Depan.",
+      desc: "Indev Tech adalah studio rekayasa digital tempat ide-ide ambisius diwujudkan menjadi kenyataan. Kami bukan sekadar pengembang; kami adalah partner teknis yang tumbuh bersama visi Anda.",
+      btns: ["Mulai Diskusi", "Eksplorasi Karya"]
     },
-    clients: "Dipercaya Oleh Perusahaan Progresif",
+    clients: "Berkolaborasi Dengan Visi-Visi Hebat",
     services: {
-      tag: "Layanan Kami",
-      title: "Custom Engineering",
-      titleItalic: "Solutions.",
-      desc: "Kami menghadirkan spektrum layanan teknologi lengkap untuk mengakselerasi transformasi digital perusahaan Anda.",
+      tag: "Keahlian Kami",
+      title: "Solusi Digital &",
+      titleItalic: "Teknologi Andal.",
+      desc: "Kami menyediakan layanan digital yang membantu bisnis Anda berkembang dengan efektif dan efisien.",
       items: [
-        { title: "Corporate Digital Presence", desc: "Website korporat eksklusif dan platform digital yang memperkuat otoritas brand Anda di pasar.", icon: Globe },
-        { title: "Enterprise Business System", desc: "Pengembangan ERP kustom, CRM, dan sistem manajemen operasional yang terintegrasi penuh.", icon: Layers },
-        { title: "Scalable Custom Software", desc: "Arsitektur perangkat lunak yang dirancang khusus untuk menangani kompleksitas bisnis unik Anda.", icon: Code },
-        { title: "Advanced Mobile Apps", desc: "Aplikasi mobile performa tinggi dengan pengalaman pengguna (UX) yang intuitif dan modern.", icon: Smartphone },
-        { title: "Strategic Tech Partnership", desc: "Dukungan teknis premium, manajemen infrastruktur cloud, dan konsultasi strategi TI.", icon: ShieldCheck },
+        {
+          title: "Website Basic",
+          desc: "Website profesional untuk usaha kecil atau personal, dirancang agar mudah digunakan dan menarik pengunjung.",
+          icon: Globe
+        },
+        {
+          title: "Website Custom",
+          desc: "Website yang dibuat sesuai kebutuhan spesifik bisnis Anda, lengkap dengan fitur dan desain unik.",
+          icon: Code
+        },
+        {
+          title: "Mobile App",
+          desc: "Aplikasi mobile untuk Android & iOS yang meningkatkan interaksi dan pengalaman pengguna.",
+          icon: Smartphone
+        },
+        {
+          title: "Maintenance & Support",
+          desc: "Layanan pemeliharaan dan dukungan agar website atau aplikasi Anda selalu aman dan berjalan lancar.",
+          icon: ShieldCheck
+        },
+        {
+          title: "Digital Consulting",
+          desc: "Bimbingan dan solusi strategi digital untuk mengoptimalkan proses bisnis dan kehadiran online Anda.",
+          icon: Layers
+        },
       ],
-      more: "Detail Layanan",
+      more: "Lihat Detail",
     },
     about: {
-      tag: "Tentang Kami",
-      title: "Inovasi Tanpa Batas di",
-      titleItalic: "Indev Tech Solutions.",
-      desc: "Indev Tech Solutions lahir dari visi untuk mendemokrasikan teknologi kelas atas bagi perusahaan yang ingin bertransformasi. Kami bukan sekadar vendor, melainkan mitra strategis.",
+      tag: "Siapa Kami",
+      title: "Kreativitas Bertemu",
+      titleItalic: "Eksperimentalitas.",
+      desc: "Indev Tech lahir dari semangat untuk membawa teknologi kelas dunia ke tangan para kreator dan inovator. Kami adalah kolektif yang percaya bahwa setiap baris kode harus memiliki tujuan.",
       features: [
-        { icon: Zap, title: "Standardisasi Global", desc: "Menggunakan metodologi pengembangan modern dan aman." },
-        { icon: Briefcase, title: "Pendekatan Konsultatif", desc: "Solusi yang disesuaikan dengan tantangan spesifik bisnis Anda." }
+        { icon: Zap, title: "Standar Artisan", desc: "Setiap proyek dikerjakan dengan ketelitian tingkat tinggi layaknya sebuah karya seni." },
+        { icon: Briefcase, title: "Eksplorasi Bersama", desc: "Kami tidak mendikte; kami mendengarkan dan berevolusi bersama tantangan Anda." }
       ],
-      exp: "5+ Tahun Pengalaman"
+      exp: "5+ Tahun Berkolaborasi"
     },
     process: {
-      tag: "Cara Kami Bekerja",
-      title: "Langkah Sederhana Menuju",
-      titleItalic: "Solusi Digital.",
-      desc: "Kami menyederhanakan kompleksitas teknis agar Anda bisa fokus sepenuhnya pada pertumbuhan bisnis Anda.",
+      tag: "Alur Kerja",
+      title: "Dari Ide Menuju",
+      titleItalic: "Karya Digital.",
+      desc: "Kami ingin Anda merasa terlibat di setiap langkah. Proses kami dibuat agar mudah dimengerti, transparan, dan menyenangkan.",
       steps: [
-        { title: "Diskusi & Strategi", desc: "Kami mendengarkan tantangan bisnis Anda dan merumuskan rencana aksi yang paling efisien.", icon: MessageSquare },
-        { title: "Visualisasi Konsep", desc: "Anda mendapatkan gambaran jelas sistem sebelum dibangun, memastikan semua sesuai ekspektasi.", icon: Search },
-        { title: "Pengerjaan Cepat", desc: "Tim kami membangun sistem dengan update berkala, memberikan transparansi penuh setiap minggunya.", icon: Zap },
-        { title: "Peluncuran & Support", desc: "Sistem siap pakai dan kami pastikan operasional berjalan mulus dengan dukungan teknis penuh.", icon: ShieldCheck },
+        {
+          title: "Ngobrol & Pahami Ide",
+          desc: "Kita duduk bareng, ngobrol santai tentang visi dan kebutuhan Anda, supaya solusi yang dibuat benar-benar pas.",
+          icon: MessageSquare
+        },
+        {
+          title: "Buat Gambaran Awal",
+          desc: "Kami bikin sketsa atau prototipe sederhana agar Anda bisa melihat dan merasakan hasilnya sebelum dibuat secara teknis.",
+          icon: Search
+        },
+        {
+          title: "Bangun & Kembangkan",
+          desc: "Tim kami mulai membangun produk digital, sambil memberi update secara berkala agar Anda selalu tahu progresnya.",
+          icon: Zap
+        },
+        {
+          title: "Serah Terima & Dampingi",
+          desc: "Setelah produk siap, kami tetap mendampingi untuk memastikan semuanya berjalan lancar dan sesuai harapan.",
+          icon: ShieldCheck
+        },
       ],
-      cta: { title: "Ingin konsultasi tanpa komitmen?", desc: "Ceritakan ide Anda, dan biarkan tim ahli kami yang memetakan solusi teknisnya untuk Anda.", btn: "Hubungi Tim Ahli" }
+      cta: {
+        title: "Punya ide yang ingin dibahas?",
+        desc: "Obrolan santai bisa jadi awal dari sesuatu yang hebat. Mari diskusikan potensi teknologi untuk Anda.",
+        btn: "Ngobrol Bersama Kami"
+      }
     },
     footer: {
-      ctaTitle: "Wujudkan visi",
-      ctaItalic: "teknologi Anda.",
+      ctaTitle: "Mari buat sesuatu",
+      ctaItalic: "yang bermakna.",
       ctaBtn: "Hubungi Kami",
-      tagline: "Penyedia solusi rekayasa perangkat lunak terpercaya untuk transformasi digital korporasi.",
+      tagline: "Kolektif engineer dan desainer yang berfokus pada pembangunan solusi digital yang berdampak.",
       labels: {
-        connectivity: "Konektivitas",
-        studio: "Remote-First Studio",
+        connectivity: "Koneksi",
+        studio: "Creative Studio",
         location: "Surabaya, Indonesia",
-        channels: "Saluran Komunikasi"
+        channels: "Hubungi Melalui"
       },
       nav: {
-        company: { title: "Perusahaan", links: [{ n: "Layanan", h: "#services" }, { n: "Portofolio", h: "#projects" }, { n: "Tentang", h: "#about" }] },
-        social: { title: "Media Sosial", links: ["LinkedIn", "Instagram", "Twitter X"] }
+        company: { title: "Navigasi", links: [{ n: "Karya", h: "#services" }, { n: "Tentang Kami", h: "#about" }, { n: "Proses", h: "#process" }] },
+        social: { title: "Ruang Sosial", links: ["LinkedIn", "Instagram", "Twitter X"] }
       }
     }
   },
   en: {
     hero: {
-      badge: "Enterprise Technology Partner",
-      title: "Digital Engineering",
-      titleItalic: "at Global Scale.",
-      desc: "Indev Tech Solutions delivers intelligent technology ecosystems for modern businesses. We build scalable, secure systems oriented toward real impact.",
-      btns: ["Free Consultation", "Explore Solutions"]
+      badge: "Creative Tech Collective",
+      title: "Architecting the",
+      titleItalic: "Digital Future.",
+      desc: "Indev Tech is a digital engineering studio where ambitious ideas come to life. We are more than developers; we are tech partners growing with your vision.",
+      btns: ["Start a Talk", "Explore Works"]
     },
-    clients: "Trusted by Progressive Companies",
+    clients: "Collaborating With Great Visions",
     services: {
-      tag: "Our Services",
-      title: "Custom Engineering",
-      titleItalic: "Solutions.",
-      desc: "We provide a full spectrum of technology services to accelerate your company's digital transformation.",
+      tag: "Our Expertise",
+      title: "Digital Craft &",
+      titleItalic: "Engineering.",
+      desc: "We provide digital services that help your business grow effectively and efficiently.",
       items: [
-        { title: "Corporate Digital Presence", desc: "Exclusive corporate websites and digital platforms that strengthen your brand authority.", icon: Globe },
-        { title: "Enterprise Business System", desc: "Development of custom ERP, CRM, and fully integrated operational management systems.", icon: Layers },
-        { title: "Scalable Custom Software", desc: "Software architecture specifically designed to handle your unique business complexities.", icon: Code },
-        { title: "Advanced Mobile Apps", desc: "High-performance mobile applications with intuitive and modern user experiences.", icon: Smartphone },
-        { title: "Strategic Tech Partnership", desc: "Premium technical support, cloud infrastructure management, and IT strategy consulting.", icon: ShieldCheck },
+        {
+          title: "Website Basic",
+          desc: "Professional websites for small businesses or personal use, designed to be user-friendly and engaging.",
+          icon: Globe
+        },
+        {
+          title: "Website Custom",
+          desc: "Websites built according to your business needs, complete with unique features and design.",
+          icon: Code
+        },
+        {
+          title: "Mobile App",
+          desc: "Mobile applications for Android & iOS that enhance interaction and user experience.",
+          icon: Smartphone
+        },
+        {
+          title: "Maintenance & Support",
+          desc: "Maintenance and support services to keep your website or app secure and running smoothly.",
+          icon: ShieldCheck
+        },
+        {
+          title: "Digital Consulting",
+          desc: "Guidance and digital strategy solutions to optimize your business processes and online presence.",
+          icon: Layers
+        },
       ],
-      more: "Service Details",
+      more: "View Details",
     },
     about: {
-      tag: "About Us",
-      title: "Boundless Innovation at",
-      titleItalic: "Indev Tech Solutions.",
-      desc: "Indev Tech Solutions was born from a vision to democratize high-end technology. We are a strategic partner understanding your growth.",
+      tag: "Who We Are",
+      title: "Creativity Meets",
+      titleItalic: "Experimentation.",
+      desc: "Indev Tech was born from a passion for bringing world-class technology to creators and innovators. We are a collective believing every line of code should have a purpose.",
       features: [
-        { icon: Zap, title: "Global Standardization", desc: "Utilizing modern and secure development methodologies." },
-        { icon: Briefcase, title: "Consultative Approach", desc: "Solutions tailored to your specific business challenges." }
+        { icon: Zap, title: "Artisan Standard", desc: "Every project is crafted with high-level precision, much like a piece of art." },
+        { icon: Briefcase, title: "Co-Exploration", desc: "We don't dictate; we listen and evolve alongside your challenges." }
       ],
-      exp: "5+ Years Experience"
+      exp: "5+ Years Collaborating"
     },
     process: {
-      tag: "How We Work",
-      title: "Simple Steps to Your",
-      titleItalic: "Digital Solution.",
-      desc: "We simplify technical complexity so you can stay focused on growing your business.",
+      tag: "Workflow",
+      title: "From Idea to",
+      titleItalic: "Digital Work.",
+      desc: "We want you to feel involved at every step. Our process is simple, clear, and easy to follow.",
       steps: [
-        { title: "Discovery & Strategy", desc: "We listen to your challenges and craft the most efficient action plan for your brand.", icon: MessageSquare },
-        { title: "Visualizing Concepts", desc: "Get a clear blueprint of your system before it's built, ensuring everything meets your vision.", icon: Search },
-        { title: "Agile Execution", desc: "We build with regular updates, keeping you informed of the progress every step of the way.", icon: Zap },
-        { title: "Launch & Support", desc: "A ready-to-use system with full technical support to ensure smooth operations.", icon: ShieldCheck },
+        {
+          title: "Talk & Understand",
+          desc: "We sit together and have a casual conversation about your vision and needs, ensuring the solution fits perfectly.",
+          icon: MessageSquare
+        },
+        {
+          title: "Create Initial Sketch",
+          desc: "We make simple sketches or prototypes so you can see and feel the result before technical development.",
+          icon: Search
+        },
+        {
+          title: "Build & Develop",
+          desc: "Our team starts building the digital product, providing regular updates so you always know the progress.",
+          icon: Zap
+        },
+        {
+          title: "Handover & Support",
+          desc: "Once the product is ready, we continue supporting to ensure everything runs smoothly and meets expectations.",
+          icon: ShieldCheck
+        },
       ],
-      cta: { title: "Want a commitment-free consultation?", desc: "Share your idea, and let our experts map out the technical journey for you.", btn: "Contact Our Experts" }
+      cta: {
+        title: "Have an idea to discuss?",
+        desc: "A casual chat can be the start of something great. Let's explore the tech potential for you.",
+        btn: "Chat With Us"
+      }
     },
     footer: {
-      ctaTitle: "Realize your",
-      ctaItalic: "tech vision.",
-      ctaBtn: "Contact Us",
-      tagline: "Trusted software engineering partner for corporate digital transformation.",
+      ctaTitle: "Let's build something",
+      ctaItalic: "meaningful.",
+      ctaBtn: "Get in Touch",
+      tagline: "A collective of engineers and designers focused on building impactful digital solutions.",
       labels: {
         connectivity: "Connectivity",
-        studio: "Remote-First Studio",
+        studio: "Creative Studio",
         location: "Surabaya, Indonesia",
-        channels: "Communication Channels"
+        channels: "Reach Us Via"
       },
       nav: {
-        company: { title: "Company", links: [{ n: "Services", h: "#services" }, { n: "Portfolio", h: "#projects" }, { n: "About", h: "#about" }] },
-        social: { title: "Social Media", links: ["LinkedIn", "Instagram", "Twitter X"] }
+        company: { title: "Navigation", links: [{ n: "Works", h: "#services" }, { n: "About Us", h: "#about" }, { n: "Process", h: "#process" }] },
+        social: { title: "Social Spaces", links: ["LinkedIn", "Instagram", "Twitter X"] }
       }
     }
   }
 }
+
 
 export default function Home() {
   const [lang, setLang] = useState<"id" | "en">("id")
@@ -249,8 +328,9 @@ export default function Home() {
               >
                 <img
                   src={logo.url}
-                  alt={logo.name}
+                  alt={`${logo.name} Partner Indev Tech`}
                   className="max-w-full max-h-full object-contain pointer-events-none"
+                  loading="lazy"
                 />
               </div>
             ))}
@@ -285,9 +365,9 @@ export default function Home() {
                 </div>
                 <h3 className="text-3xl font-serif mb-6 group-hover:text-primary transition-colors">{item.title}</h3>
                 <p className="text-muted-foreground text-base leading-relaxed font-light mb-8">{item.desc}</p>
-                <div className="flex items-center gap-3 text-primary font-bold text-xs tracking-[0.2em] uppercase opacity-0 group-hover:opacity-100 transition-all transform translate-x-[-10px] group-hover:translate-x-0">
+                {/* <div className="flex items-center gap-3 text-primary font-bold text-xs tracking-[0.2em] uppercase opacity-0 group-hover:opacity-100 transition-all transform translate-x-[-10px] group-hover:translate-x-0">
                   {t.services.more} <Plus className="w-4 h-4" />
-                </div>
+                </div> */}
               </motion.div>
             ))}
           </motion.div>

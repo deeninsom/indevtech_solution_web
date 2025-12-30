@@ -85,7 +85,7 @@ export function Navbar({ lang, setLang }: NavbarProps) {
           <div className="flex items-center gap-6">
             <button
               onClick={() => setLang(lang === "id" ? "en" : "id")}
-              className="text-[10px] font-black uppercase tracking-widest text-muted-foreground hover:text-primary transition-colors flex items-center gap-2"
+              className="text-[10px] font-black uppercase tracking-widest text-muted-foreground hover:text-primary transition-colors flex items-center gap-2 cursor-pointer"
             >
               <Languages className="w-3.5 h-3.5" />
               <span>{lang}</span>
