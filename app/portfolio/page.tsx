@@ -206,10 +206,6 @@ export default function PortfolioPage() {
         </div>
       </section>
 
-      <div className="animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
-        <PartnersSection lang={lang} />
-      </div>
-
       <section
         className="py-32 px-6 bg-secondary/20 border-t border-border/50 animate-fade-in-up"
         style={{ animationDelay: "0.5s" }}
