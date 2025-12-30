@@ -1,41 +1,38 @@
-# --- Stage 1: Build app ---
-FROM node:20-alpine AS builder
+# =====================
+# Base
+# =====================
+FROM node:20-alpine AS base
 WORKDIR /app
+RUN corepack enable && corepack prepare pnpm@latest --activate
 
-# Install pnpm
-RUN npm install -g pnpm
-
-# Copy package files dulu untuk caching
+# =====================
+# Dependencies
+# =====================
+FROM base AS deps
 COPY package.json pnpm-lock.yaml ./
-
-# Install dependencies (dev + prod)
 RUN pnpm install --frozen-lockfile
 
-# Copy source code
+# =====================
+# Builder
+# =====================
+FROM base AS builder
+COPY --from=deps /app/node_modules ./node_modules
 COPY . .
-
-# Build Next.js pakai pnpm
 RUN pnpm build
 
-# --- Stage 2: Production runner ---
+# =====================
+# Runner (Standalone)
+# =====================
 FROM node:20-alpine AS runner
 WORKDIR /app
 
-# Buat user non-root
-RUN addgroup -g 1001 -S nodejs \
-    && adduser -u 1001 -S nodejs -G nodejs
-
-USER nodejs
 ENV NODE_ENV=production
+
+# copy only standalone output
+COPY --from=builder /app/.next/standalone ./
+COPY --from=builder /app/.next/static ./.next/static
+COPY --from=builder /app/public ./public
+
 EXPOSE 3000
 
-# Copy hasil build + public + package.json
-COPY --from=builder /app/.next ./.next
-COPY --from=builder /app/public ./public
-COPY --from=builder /app/package.json ./package.json
-
-# Install hanya production dependencies
-RUN pnpm install --prod
-
-# Start Next.js pakai pnpm
-CMD ["pnpm", "start"]
+CMD ["node", "server.js"]

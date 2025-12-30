@@ -46,96 +46,104 @@ const clientLogos = [
 const content = {
   id: {
     hero: {
-      badge: "Creative Tech Collective",
-      title: "Membangun Arsitektur",
-      titleItalic: "Masa Depan.",
-      desc: "Indev Tech adalah studio rekayasa digital tempat ide-ide ambisius diwujudkan menjadi kenyataan. Kami bukan sekadar pengembang; kami adalah partner teknis yang tumbuh bersama visi Anda.",
-      btns: ["Mulai Diskusi", "Eksplorasi Karya"]
+      badge: "Custom Software Development",
+      title: "Solusi Software",
+      titleItalic: "Untuk Pertumbuhan Bisnis.",
+      desc: "Indevtech Solutions menyediakan layanan pengembangan software kustom untuk bisnis dan startup, mulai dari aplikasi web, mobile, hingga sistem terintegrasi yang dirancang untuk performa, keamanan, dan skalabilitas jangka panjang.",
+      btns: ["Diskusi Kebutuhan"]
     },
     clients: "Berkolaborasi Dengan Visi-Visi Hebat",
     services: {
-      tag: "Keahlian Kami",
-      title: "Solusi Digital &",
-      titleItalic: "Teknologi Andal.",
-      desc: "Kami menyediakan layanan digital yang membantu bisnis Anda berkembang dengan efektif dan efisien.",
+      tag: "Layanan Kami",
+      title: "Jasa Pengembangan",
+      titleItalic: "Software.",
+      desc: "Kami fokus pada pengembangan dan pengerjaan software sesuai kebutuhan, mulai dari website sederhana hingga aplikasi custom dan mobile.",
       items: [
         {
-          title: "Website Basic",
-          desc: "Website profesional untuk usaha kecil atau personal, dirancang agar mudah digunakan dan menarik pengunjung.",
+          title: "Website Basic (Company Profile)",
+          desc: "Pembuatan website company profile, landing page, atau website usaha sederhana yang profesional, cepat, dan mudah dikelola.",
           icon: Globe
         },
         {
           title: "Website Custom",
-          desc: "Website yang dibuat sesuai kebutuhan spesifik bisnis Anda, lengkap dengan fitur dan desain unik.",
+          desc: "Pengembangan website custom sesuai kebutuhan bisnis Anda, termasuk sistem internal, dashboard, dan fitur khusus.",
           icon: Code
         },
         {
-          title: "Mobile App",
-          desc: "Aplikasi mobile untuk Android & iOS yang meningkatkan interaksi dan pengalaman pengguna.",
+          title: "Mobile App (Android & iOS)",
+          desc: "Pembuatan aplikasi mobile Android dan iOS, baik untuk kebutuhan bisnis, internal perusahaan, maupun produk digital.",
           icon: Smartphone
         },
         {
           title: "Maintenance & Support",
-          desc: "Layanan pemeliharaan dan dukungan agar website atau aplikasi Anda selalu aman dan berjalan lancar.",
+          desc: "Layanan perawatan, perbaikan bug, update fitur, dan dukungan teknis untuk website atau aplikasi agar tetap stabil dan aman.",
           icon: ShieldCheck
         },
         {
-          title: "Digital Consulting",
-          desc: "Bimbingan dan solusi strategi digital untuk mengoptimalkan proses bisnis dan kehadiran online Anda.",
+          title: "Project Skripsi (Web / App)",
+          desc: "Pengerjaan dan bantuan project skripsi berbasis web atau aplikasi, disesuaikan dengan kebutuhan akademik dan studi kasus.",
           icon: Layers
         },
       ],
-      more: "Lihat Detail",
+      more: "Lihat Detail Layanan",
     },
     about: {
-      tag: "Siapa Kami",
-      title: "Kreativitas Bertemu",
-      titleItalic: "Eksperimentalitas.",
-      desc: "Indev Tech lahir dari semangat untuk membawa teknologi kelas dunia ke tangan para kreator dan inovator. Kami adalah kolektif yang percaya bahwa setiap baris kode harus memiliki tujuan.",
+      tag: "Tentang Kami",
+      title: "Mitra Teknologi",
+      titleItalic: "Yang Bisa Diandalkan.",
+      desc: "Indevtech Solutions adalah penyedia jasa pengembangan software yang berfokus pada pembuatan website dan aplikasi sesuai kebutuhan. Kami bekerja secara praktis dan transparan, memastikan setiap solusi yang dibangun benar-benar relevan dan dapat digunakan dalam jangka panjang.",
       features: [
-        { icon: Zap, title: "Standar Artisan", desc: "Setiap proyek dikerjakan dengan ketelitian tingkat tinggi layaknya sebuah karya seni." },
-        { icon: Briefcase, title: "Eksplorasi Bersama", desc: "Kami tidak mendikte; kami mendengarkan dan berevolusi bersama tantangan Anda." }
+        {
+          icon: Zap,
+          title: "Fokus Kualitas",
+          desc: "Kami mengerjakan setiap proyek dengan standar teknis yang rapi, terstruktur, dan mudah dikembangkan di kemudian hari."
+        },
+        {
+          icon: Briefcase,
+          title: "Pendekatan Kolaboratif",
+          desc: "Kami terbiasa bekerja berdasarkan kebutuhan klien, berdiskusi secara jelas, dan menyelesaikan proyek sesuai ruang lingkup yang disepakati."
+        }
       ],
-      exp: "5+ Tahun Berkolaborasi"
+      exp: "Berpengalaman dalam Berbagai Proyek Digital"
     },
     process: {
-      tag: "Alur Kerja",
-      title: "Dari Ide Menuju",
-      titleItalic: "Karya Digital.",
-      desc: "Kami ingin Anda merasa terlibat di setiap langkah. Proses kami dibuat agar mudah dimengerti, transparan, dan menyenangkan.",
+      tag: "Proses Kerja",
+      title: "Alur Pengerjaan",
+      titleItalic: "Yang Sederhana.",
+      desc: "Kami menggunakan alur kerja yang jelas dan transparan agar proyek berjalan efisien dan sesuai kebutuhan.",
       steps: [
         {
-          title: "Ngobrol & Pahami Ide",
-          desc: "Kita duduk bareng, ngobrol santai tentang visi dan kebutuhan Anda, supaya solusi yang dibuat benar-benar pas.",
+          title: "Diskusi Kebutuhan",
+          desc: "Kami membahas tujuan, fitur, dan ruang lingkup proyek agar kebutuhan Anda jelas sejak awal.",
           icon: MessageSquare
         },
         {
-          title: "Buat Gambaran Awal",
-          desc: "Kami bikin sketsa atau prototipe sederhana agar Anda bisa melihat dan merasakan hasilnya sebelum dibuat secara teknis.",
+          title: "Perencanaan",
+          desc: "Kami menyusun gambaran awal seperti alur sistem atau tampilan sebagai acuan pengerjaan.",
           icon: Search
         },
         {
-          title: "Bangun & Kembangkan",
-          desc: "Tim kami mulai membangun produk digital, sambil memberi update secara berkala agar Anda selalu tahu progresnya.",
+          title: "Pengembangan",
+          desc: "Proyek dikerjakan sesuai rencana dengan update progres secara berkala.",
           icon: Zap
         },
         {
-          title: "Serah Terima & Dampingi",
-          desc: "Setelah produk siap, kami tetap mendampingi untuk memastikan semuanya berjalan lancar dan sesuai harapan.",
+          title: "Serah Terima",
+          desc: "Hasil akhir diserahkan dan diuji bersama untuk memastikan semuanya berjalan dengan baik.",
           icon: ShieldCheck
         },
       ],
       cta: {
-        title: "Punya ide yang ingin dibahas?",
-        desc: "Obrolan santai bisa jadi awal dari sesuatu yang hebat. Mari diskusikan potensi teknologi untuk Anda.",
-        btn: "Ngobrol Bersama Kami"
+        title: "Siap memulai proyek?",
+        desc: "Sampaikan kebutuhan Anda, kami akan membantu mengerjakannya secara jelas dan terarah.",
+        btn: "Mulai Diskusi"
       }
     },
     footer: {
       ctaTitle: "Mari buat sesuatu",
       ctaItalic: "yang bermakna.",
       ctaBtn: "Hubungi Kami",
-      tagline: "Kolektif engineer dan desainer yang berfokus pada pembangunan solusi digital yang berdampak.",
+      tagline: "Partner pengembangan software untuk website dan aplikasi yang siap digunakan.",
       labels: {
         connectivity: "Koneksi",
         studio: "Creative Studio",
@@ -150,110 +158,127 @@ const content = {
   },
   en: {
     hero: {
-      badge: "Creative Tech Collective",
-      title: "Architecting the",
-      titleItalic: "Digital Future.",
-      desc: "Indev Tech is a digital engineering studio where ambitious ideas come to life. We are more than developers; we are tech partners growing with your vision.",
-      btns: ["Start a Talk", "Explore Works"]
+      badge: "Custom Software Development",
+      title: "Software Solutions",
+      titleItalic: "For Business Growth.",
+      desc: "Indevtech Solutions provides custom software development services for businesses and startups, including web applications, mobile apps, and integrated systems built for performance, security, and long-term scalability.",
+      btns: ["Discuss Requirements"]
     },
-    clients: "Collaborating With Great Visions",
+    clients: "Collaborating With Vision-Driven Clients",
     services: {
-      tag: "Our Expertise",
-      title: "Digital Craft &",
-      titleItalic: "Engineering.",
-      desc: "We provide digital services that help your business grow effectively and efficiently.",
+      tag: "Our Services",
+      title: "Software Development",
+      titleItalic: "Services.",
+      desc: "We focus on building software based on real needs, from simple websites to custom systems and mobile applications.",
       items: [
         {
-          title: "Website Basic",
-          desc: "Professional websites for small businesses or personal use, designed to be user-friendly and engaging.",
+          title: "Basic Website (Company Profile)",
+          desc: "Development of company profile websites, landing pages, or simple business websites that are professional, fast, and easy to manage.",
           icon: Globe
         },
         {
-          title: "Website Custom",
-          desc: "Websites built according to your business needs, complete with unique features and design.",
+          title: "Custom Website",
+          desc: "Custom website development tailored to your business needs, including internal systems, dashboards, and specific features.",
           icon: Code
         },
         {
-          title: "Mobile App",
-          desc: "Mobile applications for Android & iOS that enhance interaction and user experience.",
+          title: "Mobile App (Android & iOS)",
+          desc: "Mobile application development for Android and iOS, for business needs, internal use, or digital products.",
           icon: Smartphone
         },
         {
           title: "Maintenance & Support",
-          desc: "Maintenance and support services to keep your website or app secure and running smoothly.",
+          desc: "Ongoing maintenance, bug fixes, feature updates, and technical support to keep your website or application stable and secure.",
           icon: ShieldCheck
         },
         {
-          title: "Digital Consulting",
-          desc: "Guidance and digital strategy solutions to optimize your business processes and online presence.",
+          title: "Thesis Project (Web / App)",
+          desc: "Development and assistance for academic thesis projects based on web or mobile applications, adjusted to study requirements and case studies.",
           icon: Layers
         },
       ],
-      more: "View Details",
+      more: "View Service Details",
     },
     about: {
-      tag: "Who We Are",
-      title: "Creativity Meets",
-      titleItalic: "Experimentation.",
-      desc: "Indev Tech was born from a passion for bringing world-class technology to creators and innovators. We are a collective believing every line of code should have a purpose.",
+      tag: "About Us",
+      title: "A Technology Partner",
+      titleItalic: "You Can Rely On.",
+      desc: "Indevtech Solutions is a software development service focused on building websites and applications based on real needs. We work in a practical and transparent way to ensure every solution is relevant and usable in the long term.",
       features: [
-        { icon: Zap, title: "Artisan Standard", desc: "Every project is crafted with high-level precision, much like a piece of art." },
-        { icon: Briefcase, title: "Co-Exploration", desc: "We don't dictate; we listen and evolve alongside your challenges." }
+        {
+          icon: Zap,
+          title: "Quality-Focused",
+          desc: "Every project is built with clean structure, solid technical standards, and future scalability in mind."
+        },
+        {
+          icon: Briefcase,
+          title: "Collaborative Approach",
+          desc: "We work closely with clients, communicate clearly, and deliver projects based on agreed scopes and requirements."
+        }
       ],
-      exp: "5+ Years Collaborating"
+      exp: "Experienced Across Various Digital Projects"
     },
     process: {
-      tag: "Workflow",
-      title: "From Idea to",
-      titleItalic: "Digital Work.",
-      desc: "We want you to feel involved at every step. Our process is simple, clear, and easy to follow.",
+      tag: "Process",
+      title: "A Simple",
+      titleItalic: "Workflow.",
+      desc: "We use a clear and transparent workflow to ensure projects are delivered efficiently and meet expectations.",
       steps: [
         {
-          title: "Talk & Understand",
-          desc: "We sit together and have a casual conversation about your vision and needs, ensuring the solution fits perfectly.",
+          title: "Requirements Discussion",
+          desc: "We discuss goals, features, and project scope to ensure everything is clearly defined from the start.",
           icon: MessageSquare
         },
         {
-          title: "Create Initial Sketch",
-          desc: "We make simple sketches or prototypes so you can see and feel the result before technical development.",
+          title: "Planning",
+          desc: "We prepare initial plans such as system flows or interface outlines as a development reference.",
           icon: Search
         },
         {
-          title: "Build & Develop",
-          desc: "Our team starts building the digital product, providing regular updates so you always know the progress.",
+          title: "Development",
+          desc: "The project is developed according to the plan, with regular progress updates.",
           icon: Zap
         },
         {
-          title: "Handover & Support",
-          desc: "Once the product is ready, we continue supporting to ensure everything runs smoothly and meets expectations.",
+          title: "Delivery",
+          desc: "The final product is delivered and reviewed together to ensure everything works as expected.",
           icon: ShieldCheck
         },
       ],
       cta: {
-        title: "Have an idea to discuss?",
-        desc: "A casual chat can be the start of something great. Let's explore the tech potential for you.",
-        btn: "Chat With Us"
+        title: "Ready to start your project?",
+        desc: "Share your requirements and we’ll help bring them to life with a clear and structured approach.",
+        btn: "Start Discussion"
       }
     },
     footer: {
-      ctaTitle: "Let's build something",
+      ctaTitle: "Let’s build something",
       ctaItalic: "meaningful.",
-      ctaBtn: "Get in Touch",
-      tagline: "A collective of engineers and designers focused on building impactful digital solutions.",
+      ctaBtn: "Contact Us",
+      tagline: "A software development partner for production-ready websites and applications.",
       labels: {
         connectivity: "Connectivity",
-        studio: "Creative Studio",
+        studio: "Development Studio",
         location: "Surabaya, Indonesia",
-        channels: "Reach Us Via"
+        channels: "Contact Via"
       },
       nav: {
-        company: { title: "Navigation", links: [{ n: "Works", h: "#services" }, { n: "About Us", h: "#about" }, { n: "Process", h: "#process" }] },
-        social: { title: "Social Spaces", links: ["LinkedIn", "Instagram", "Twitter X"] }
+        company: {
+          title: "Navigation",
+          links: [
+            { n: "Services", h: "#services" },
+            { n: "About Us", h: "#about" },
+            { n: "Process", h: "#process" }
+          ]
+        },
+        social: {
+          title: "Social",
+          links: ["LinkedIn", "Instagram", "Twitter X"]
+        }
       }
     }
   }
 }
-
 
 export default function Home() {
   const [lang, setLang] = useState<"id" | "en">("id")
@@ -269,6 +294,15 @@ export default function Home() {
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" })
+  }
+
+  // Handle WhatsApp Redirection
+  const handleContact = () => {
+    const phone = "6283877995846"
+    const message = lang === "id"
+      ? "Halo Indevtech Solutions, saya tertarik untuk mendiskusikan proyek software saya."
+      : "Hello Indevtech Solutions, I am interested in discussing my software project."
+    window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, "_blank")
   }
 
   return (
@@ -287,7 +321,7 @@ export default function Home() {
             <Rocket className="w-3.5 h-3.5" /> {t.hero.badge}
           </motion.div>
 
-          <motion.h1 variants={fadeInUp} className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-serif leading-[0.95] tracking-tight text-balance">
+          <motion.h1 variants={fadeInUp} className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-serif leading-[0.95] tracking-tight text-balance">
             {t.hero.title} <br />
             <span className="text-primary italic font-light">{t.hero.titleItalic}</span>
           </motion.h1>
@@ -297,11 +331,11 @@ export default function Home() {
           </motion.p>
 
           <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row items-center justify-center gap-6 pt-6">
-            <button className="w-full sm:w-auto px-12 py-6 bg-primary text-primary-foreground rounded-full font-bold text-lg flex items-center justify-center gap-3 hover:scale-105 transition-all shadow-xl shadow-primary/25">
+            <button
+              onClick={handleContact}
+              className="w-full sm:w-auto px-12 py-6 bg-primary text-primary-foreground rounded-full font-bold text-lg flex items-center justify-center gap-3 hover:scale-105 transition-all shadow-xl shadow-primary/25"
+            >
               {t.hero.btns[0]} <ArrowRight className="w-5 h-5" />
-            </button>
-            <button className="w-full sm:w-auto px-12 py-6 border border-border bg-background/50 backdrop-blur-md rounded-full font-bold text-lg hover:bg-secondary transition-all">
-              {t.hero.btns[1]}
             </button>
           </motion.div>
         </motion.div>
@@ -315,16 +349,22 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="relative flex overflow-x-hidden">
+        <div className="relative flex overflow-hidden group">
+          {/* Container Animasi */}
           <motion.div
             className="flex whitespace-nowrap gap-16 md:gap-24 items-center"
-            animate={{ x: ["0%", "-50%"] }}
-            transition={{ ease: "linear", duration: 30, repeat: Infinity }}
+            animate={{ x: ["0%", "-50%"] }} // Bergeser setengah dari total lebar (karena kita menduplikasi list)
+            transition={{
+              ease: "linear",
+              duration: 20, // Percepat sedikit agar lebih smooth (opsional)
+              repeat: Infinity
+            }}
           >
-            {[...clientLogos, ...clientLogos].map((logo, i) => (
+            {/* Kita render list logo 4x atau lebih untuk memastikan tidak ada celah kosong di layar lebar */}
+            {[...clientLogos, ...clientLogos, ...clientLogos, ...clientLogos].map((logo, i) => (
               <div
                 key={i}
-                className="relative w-32 h-12 md:w-40 md:h-16 flex items-center justify-center grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all duration-500 cursor-default px-4"
+                className="relative shrink-0 w-32 h-12 md:w-40 md:h-16 flex items-center justify-center grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all duration-500 cursor-default px-4"
               >
                 <img
                   src={logo.url}
@@ -336,9 +376,9 @@ export default function Home() {
             ))}
           </motion.div>
 
-          {/* Gradient Overlays untuk efek fade di pinggir */}
-          <div className="pointer-events-none absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-background to-transparent z-10" />
-          <div className="pointer-events-none absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-background to-transparent z-10" />
+          {/* Gradient Overlay agar transisi di pinggir layar halus */}
+          <div className="pointer-events-none absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-background via-background/80 to-transparent z-10" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-background via-background/80 to-transparent z-10" />
         </div>
       </section>
 
@@ -354,7 +394,7 @@ export default function Home() {
               {t.services.title} <br />
               <span className="text-primary italic font-light">{t.services.titleItalic}</span>
             </h2>
-            <p className="text-muted-foreground text-xl max-w-2xl font-light">{t.services.desc}</p>
+            <p className="max-w-prose text-muted-foreground text-xl font-light">{t.services.desc}</p>
           </motion.div>
 
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={staggerContainer} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -363,11 +403,8 @@ export default function Home() {
                 <div className="w-20 h-20 rounded-3xl bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-500 mb-10 shadow-inner">
                   <item.icon className="w-10 h-10" />
                 </div>
-                <h3 className="text-3xl font-serif mb-6 group-hover:text-primary transition-colors">{item.title}</h3>
-                <p className="text-muted-foreground text-base leading-relaxed font-light mb-8">{item.desc}</p>
-                {/* <div className="flex items-center gap-3 text-primary font-bold text-xs tracking-[0.2em] uppercase opacity-0 group-hover:opacity-100 transition-all transform translate-x-[-10px] group-hover:translate-x-0">
-                  {t.services.more} <Plus className="w-4 h-4" />
-                </div> */}
+                <h3 className="text-3xl font-semibold mb-6 group-hover:text-primary transition-colors">{item.title}</h3>
+                <p className="max-w-prose text-muted-foreground text-base leading-relaxed font-light mb-8">{item.desc}</p>
               </motion.div>
             ))}
           </motion.div>
@@ -375,7 +412,7 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-40 px-6 bg-secondary/5 relative overflow-hidden">
+      {/* <section id="about" className="py-40 px-6 bg-secondary/5 relative overflow-hidden">
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="grid lg:grid-cols-2 gap-24 items-center">
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={imageReveal} className="relative">
@@ -390,8 +427,8 @@ export default function Home() {
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={staggerContainer} className="space-y-12">
               <div className="space-y-6">
                 <span className="text-primary text-xs uppercase tracking-[0.5em] font-black">{t.about.tag}</span>
-                <h2 className="text-5xl md:text-7xl font-serif leading-tight">{t.about.title} <br /><span className="text-primary italic font-light">{t.about.titleItalic}</span></h2>
-                <p className="text-muted-foreground text-xl leading-relaxed font-light">{t.about.desc}</p>
+                <h2 className="text-4xl md:text-7xl font-serif leading-tight">{t.about.title} <br /><span className="text-primary italic font-light">{t.about.titleItalic}</span></h2>
+                <p className="max-w-prose text-muted-foreground text-xl leading-relaxed font-light">{t.about.desc}</p>
               </div>
               <div className="grid gap-8">
                 {t.about.features.map((f, i) => (
@@ -401,7 +438,7 @@ export default function Home() {
                     </div>
                     <div>
                       <h4 className="font-bold text-xl mb-2">{f.title}</h4>
-                      <p className="text-muted-foreground leading-relaxed">{f.desc}</p>
+                      <p className="max-w-prose text-muted-foreground leading-relaxed">{f.desc}</p>
                     </div>
                   </motion.div>
                 ))}
@@ -409,18 +446,18 @@ export default function Home() {
             </motion.div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Process Section */}
       <section id="process" className="py-40 px-6 overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="text-center space-y-6 mb-32">
             <span className="text-primary text-xs uppercase tracking-[0.5em] font-black">{t.process.tag}</span>
-            <h2 className="text-5xl md:text-8xl font-serif leading-tight">
+            <h2 className="text-4xl md:text-7xl font-serif leading-tight">
               {t.process.title} <br />
               <span className="text-primary italic font-light">{t.process.titleItalic}</span>
             </h2>
-            <p className="text-muted-foreground text-xl max-w-2xl mx-auto font-light">{t.process.desc}</p>
+            <p className="max-w-prose text-muted-foreground text-xl  mx-auto font-light">{t.process.desc}</p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
@@ -429,14 +466,14 @@ export default function Home() {
               <motion.div key={i} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="relative group">
                 <div className="bg-background border border-border p-10 rounded-[40px] space-y-8 hover:border-primary/40 transition-all duration-500 hover:shadow-2xl h-full flex flex-col justify-between">
                   <div className="flex justify-between items-start">
-                    <div className="text-5xl font-serif italic text-primary/20 group-hover:text-primary transition-colors">0{i + 1}</div>
+                    <div className="text-xl font-serif italic text-primary/20 group-hover:text-primary transition-colors">0{i + 1}</div>
                     <div className="w-12 h-12 rounded-2xl bg-secondary/50 flex items-center justify-center border border-border group-hover:bg-primary group-hover:text-primary-foreground transition-all">
                       <step.icon className="w-5 h-5" />
                     </div>
                   </div>
                   <div className="space-y-4">
                     <h4 className="text-2xl font-serif">{step.title}</h4>
-                    <p className="text-muted-foreground font-light leading-relaxed text-sm">{step.desc}</p>
+                    <p className="max-w-prose text-muted-foreground font-light leading-relaxed text-sm">{step.desc}</p>
                   </div>
                 </div>
               </motion.div>
@@ -444,9 +481,14 @@ export default function Home() {
           </div>
 
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="mt-32 p-12 md:p-20 rounded-[60px] bg-primary text-primary-foreground text-center space-y-8 shadow-2xl">
-            <h3 className="text-3xl md:text-5xl font-serif max-w-3xl mx-auto">{t.process.cta.title}</h3>
-            <p className="text-primary-foreground/80 text-lg max-w-2xl mx-auto font-light">{t.process.cta.desc}</p>
-            <button className="px-10 py-5 bg-background text-foreground rounded-full font-bold hover:scale-105 transition-all shadow-xl">{t.process.cta.btn}</button>
+            <h3 className="text-3xl md:text-5xl font-semibold max-w-3xl mx-auto">{t.process.cta.title}</h3>
+            <p className="max-w-prose text-primary-foreground/80 text-lg mx-auto font-light">{t.process.cta.desc}</p>
+            <button
+              onClick={handleContact}
+              className="px-10 py-5 bg-background text-foreground rounded-full font-bold hover:scale-105 transition-all shadow-xl"
+            >
+              {t.process.cta.btn}
+            </button>
           </motion.div>
         </div>
       </section>
@@ -459,47 +501,99 @@ export default function Home() {
               <h2 className="text-6xl md:text-8xl font-serif leading-[0.9] tracking-tighter">
                 {t.footer.ctaTitle} <br /><span className="text-primary italic font-light">{t.footer.ctaItalic}</span>
               </h2>
-              <a href="mailto:hello@indevtechsolutions.com" className="inline-flex group px-10 py-5 bg-primary text-primary-foreground rounded-full font-bold items-center gap-3 hover:pr-12 transition-all shadow-2xl">
+              <button
+                onClick={handleContact}
+                className="inline-flex group px-10 py-5 bg-primary text-primary-foreground rounded-full font-bold items-center gap-3 hover:pr-12 transition-all shadow-2xl"
+              >
                 {t.footer.ctaBtn} <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
-              </a>
+              </button>
             </div>
 
             <div className="grid sm:grid-cols-2 gap-6">
-              <div className="group p-8 rounded-[32px] bg-secondary/10 border border-border/40 hover:border-primary/20 transition-all space-y-6">
-                <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary"><Globe className="w-4 h-4" /></div>
-                  <span className="text-primary uppercase tracking-widest font-bold text-[10px]">{t.footer.labels.connectivity}</span>
+              {/* Card 1: Studio Info (Remote/Surabaya) */}
+              <div className="group relative p-8 rounded-[32px] bg-secondary/5 border border-border/50 hover:border-primary/30 hover:bg-secondary/10 transition-all duration-500 space-y-8 flex flex-col justify-between overflow-hidden">
+                <div className="absolute -right-4 -top-4 w-24 h-24 bg-primary/5 rounded-full blur-2xl group-hover:bg-primary/10 transition-colors" />
+
+                <div className="relative space-y-6">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-2xl bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 group-hover:rotate-12 transition-transform duration-500">
+                      <Globe className="w-5 h-5" />
+                    </div>
+                    <span className="text-primary uppercase tracking-[0.3em] font-black text-[10px]">
+                      {t.footer.labels.connectivity}
+                    </span>
+                  </div>
+
+                  <div>
+                    <h4 className="text-2xl font-serif mb-2 group-hover:text-primary transition-colors">
+                      Digital Support
+                    </h4>
+                    <p className="text-muted-foreground font-light leading-relaxed">
+                      Beroperasi sepenuhnya secara <span className="font-medium text-foreground">online</span> untuk efisiensi maksimal, berbasis di <span className="font-medium text-foreground text-primary/80">Surabaya, ID.</span>
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <h4 className="text-lg font-bold mb-1">{t.footer.labels.studio}</h4>
-                  <p className="text-xs text-muted-foreground">{t.footer.labels.location}</p>
+
+                <div className="pt-4 border-t border-border/40">
+                  <span className="text-[10px] text-muted-foreground uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    Ready for virtual meeting
+                  </span>
                 </div>
               </div>
 
-              <div className="group p-8 rounded-[32px] bg-primary text-primary-foreground space-y-6 shadow-xl">
-                <div className="flex items-center gap-3 border-b border-white/10 pb-4">
-                  <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-white"><Mail className="w-4 h-4" /></div>
-                  <span className="uppercase tracking-widest font-bold text-[10px] text-white/70">{t.footer.labels.channels}</span>
+              {/* Card 2: Contact Info */}
+              <div className="group relative p-8 rounded-[32px] bg-primary text-primary-foreground space-y-8 shadow-2xl shadow-primary/20 hover:-translate-y-2 transition-all duration-500 flex flex-col justify-between overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/5 to-white/0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out" />
+
+                <div className="relative space-y-6">
+                  <div className="flex items-center gap-3 border-b border-white/10 pb-4">
+                    <div className="w-10 h-10 rounded-2xl bg-white/10 flex items-center justify-center text-white backdrop-blur-sm group-hover:bg-white group-hover:text-primary transition-all duration-500">
+                      <Mail className="w-5 h-5" />
+                    </div>
+                    <span className="uppercase tracking-[0.3em] font-black text-[10px] text-white/60">
+                      {t.footer.labels.channels}
+                    </span>
+                  </div>
+
+                  <div className="space-y-4">
+                    {/* ACTION: Link ke Email */}
+                    <a
+                      href="mailto:hello@indevtechsolutions.com"
+                      className="block group/link w-fit"
+                    >
+                      <p className="text-xl md:text-2xl font-serif tracking-tight break-all group-hover/link:underline underline-offset-4 decoration-white/30 transition-all">
+                        hello@indevtechsolutions.com
+                      </p>
+                    </a>
+
+                    <div className="flex flex-wrap gap-2">
+                      {/* ACTION: Link ke WhatsApp via handleContact */}
+                      <button
+                        onClick={handleContact}
+                        className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 rounded-full text-sm font-medium hover:bg-white hover:text-primary transition-all duration-300"
+                      >
+                        <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
+                        +62 838-7799-5846
+                      </button>
+                    </div>
+                  </div>
                 </div>
-                <div className="space-y-1">
-                  <p className="text-lg font-medium tracking-tight">hello@indevtechsolutions.com</p>
-                  <p className="text-xs text-white/70 font-normal">+62 838-7799-5846</p>
-                </div>
+
               </div>
             </div>
           </div>
 
           <div className="flex flex-col md:flex-row justify-between pt-20 border-t border-border gap-16">
             <div className="space-y-8 max-w-sm">
-              <Link href="/" className="text-4xl font-serif font-bold tracking-tighter">Indev Tech<span className="text-primary italic">.</span></Link>
-              <p className="text-muted-foreground font-light">{t.footer.tagline}</p>
-              <p className="text-[10px] uppercase tracking-widest text-muted-foreground/60 font-bold">© 2025 Indev Tech Solutions. All Rights Reserved.</p>
+              <Link href="/" className="text-4xl font-serif font-bold tracking-tighter">IndevTech Solutions<span className="text-primary italic">.</span></Link>
+              <p className="max-w-prose text-muted-foreground font-light">{t.footer.tagline}</p>
+              <p className="max-w-prose text-[10px] uppercase tracking-widest text-muted-foreground/60 font-bold">© 2025 Indev Tech Solutions. All Rights Reserved.</p>
             </div>
 
             <div className="grid grid-cols-2 gap-20">
               {Object.entries(t.footer.nav).map(([key, nav]: any) => (
                 <div key={key} className="space-y-8">
-                  <p className="font-bold text-xs uppercase tracking-[0.3em]">{nav.title}</p>
+                  <p className="max-w-prose font-bold text-xs uppercase tracking-[0.3em]">{nav.title}</p>
                   <ul className="space-y-4 text-muted-foreground">
                     {nav.links.map((link: any, i: number) => (
                       <li key={i}>

@@ -1,8 +1,13 @@
 services:
   nextjs:
-    build: .
+    container_name: next-indevtech
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
     ports:
-      - "80:3000"
+      - "3000:3000"
     environment:
       NODE_ENV: production
-    restart: always
+    volumes:
+      - ./.env.production:/app/.env.production:ro

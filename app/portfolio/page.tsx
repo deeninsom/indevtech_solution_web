@@ -1,17 +1,14 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useMemo } from "react"
 import { Navbar } from "@/components/navbar"
 import { cn } from "@/lib/utils"
-import { ArrowRight, Globe, Smartphone, Layers, Code, ShieldCheck } from "lucide-react"
-import { PartnersSection } from "@/components/partners-section"
+import { ArrowRight, Globe, Smartphone, Layers, Code, ShieldCheck, Sparkles } from "lucide-react"
 
 export default function PortfolioPage() {
-  // 1. State Bahasa (Default: ID)
   const [lang, setLang] = useState<"id" | "en">("id")
   const [activeCategory, setActiveCategory] = useState("all")
 
-  // 2. Kamus Konten (Dictionary)
   const dict = {
     id: {
       hero: {
@@ -19,16 +16,20 @@ export default function PortfolioPage() {
         title: "Karya yang Kami",
         titleItalic: "Banggakan.",
         desc: "Kumpulan proyek digital yang telah kami kembangkan untuk berbagai industri dengan solusi inovatif dan teknologi terkini.",
-        stats: ["Proyek Selesai", "Klien Puas", "Tingkat Kepuasan", "Support Tersedia"],
       },
       categories: [
         { id: "all", label: "Semua Proyek", icon: Layers },
-        { id: "web", label: "Web Application", icon: Globe },
+        { id: "basic", label: "Company Profile", icon: Globe },
+        { id: "custom", label: "Custom Website", icon: Code },
         { id: "mobile", label: "Mobile App", icon: Smartphone },
-        { id: "corporate", label: "Corporate Website", icon: Globe },
-        { id: "custom", label: "Custom System", icon: Code },
-        { id: "maintenance", label: "Support & Maintenance", icon: ShieldCheck },
+        { id: "maintenance", label: "Support", icon: ShieldCheck },
+        { id: "thesis", label: "Project Skripsi", icon: Layers },
       ],
+      empty: {
+        title: "Proyek Berikutnya Adalah Milik Anda",
+        desc: "Kami belum menampilkan proyek di kategori ini, tapi kami siap mewujudkan ide Anda menjadi karya hebat berikutnya.",
+        button: "Mulai Proyek Sekarang",
+      },
       cta: {
         title: "Siap Membuat Proyek",
         titleItalic: "Berikutnya?",
@@ -42,16 +43,20 @@ export default function PortfolioPage() {
         title: "Works We Are",
         titleItalic: "Proud Of.",
         desc: "A collection of digital projects we have developed for various industries with innovative solutions and the latest technology.",
-        stats: ["Completed Projects", "Happy Clients", "Satisfaction Rate", "Support Available"],
       },
       categories: [
         { id: "all", label: "All Projects", icon: Layers },
-        { id: "web", label: "Web Application", icon: Globe },
+        { id: "basic", label: "Company Profile", icon: Globe },
+        { id: "custom", label: "Custom Website", icon: Code },
         { id: "mobile", label: "Mobile App", icon: Smartphone },
-        { id: "corporate", label: "Corporate Website", icon: Globe },
-        { id: "custom", label: "Custom System", icon: Code },
-        { id: "maintenance", label: "Support & Maintenance", icon: ShieldCheck },
+        { id: "maintenance", label: "Support", icon: ShieldCheck },
+        { id: "thesis", label: "Thesis Project", icon: Layers },
       ],
+      empty: {
+        title: "Your Project Could Be Here",
+        desc: "We haven't showcased a project in this category yet. Be the first to build something amazing with us!",
+        button: "Start Project Now",
+      },
       cta: {
         title: "Ready for the Next",
         titleItalic: "Project?",
@@ -63,45 +68,47 @@ export default function PortfolioPage() {
 
   const t = dict[lang]
 
-  // 3. Data Proyek (Disesuaikan berdasarkan bahasa)
+  // Data Proyek (Hanya kategori tertentu untuk testing empty state)
   const projects = [
     {
       id: 1,
       title: "Lumina Enterprise Analytics",
-      category: "web",
-      type: lang === "id" ? "Platform Analitik Data" : "Data Analytics Platform",
-      desc:
-        lang === "id"
-          ? "Platform analitik data real-time untuk enterprise dengan visualisasi interaktif dan dashboard kustom."
-          : "Real-time data analytics platform for enterprises with interactive visualizations and custom dashboards.",
-      img: "abstract analytics dashboard with charts",
-      tech: ["Next.js", "TypeScript", "PostgreSQL", "D3.js"],
+      category: "custom",
+      type: lang === "id" ? "Custom Website & Dashboard" : "Custom Website & Dashboard",
+      desc: lang === "id" ? "Sistem internal analitik untuk mengelola data perusahaan." : "Internal analytics system to manage corporate data.",
+      tech: ["Next.js", "TypeScript", "PostgreSQL"],
       year: "2024",
     },
     {
       id: 2,
       title: "Vortex Fintech Gateway",
       category: "mobile",
-      type: lang === "id" ? "Aplikasi Perbankan & Pembayaran" : "Payment & Banking App",
-      desc:
-        lang === "id"
-          ? "Aplikasi mobile banking next-generation dengan fitur pembayaran instan dan manajemen keuangan AI."
-          : "Next-generation mobile banking app featuring instant payments and AI-driven financial management.",
-      img: "modern mobile banking app interface",
-      tech: ["React Native", "Node.js", "MongoDB", "Stripe"],
+      type: "Mobile Application",
+      desc: lang === "id" ? "Aplikasi mobile untuk manajemen keuangan." : "Mobile application for financial management.",
+      tech: ["React Native", "Node.js", "Stripe"],
       year: "2024",
     },
-    // ... Anda bisa menambahkan proyek lainnya dengan pola kondisional lang === "id" yang sama
+    // Kategori 'basic', 'maintenance', dan 'thesis' sengaja dikosongkan untuk testing
   ]
 
-  const filteredProjects = activeCategory === "all" ? projects : projects.filter((p) => p.category === activeCategory)
+  const filteredProjects = useMemo(() => {
+    return activeCategory === "all" ? projects : projects.filter((p) => p.category === activeCategory)
+  }, [activeCategory, lang])
+
+  const handleContact = () => {
+    const phone = "6283877995846"
+    const message = lang === "id"
+      ? "Halo Indevtech, saya ingin bertanya tentang proyek " + activeCategory
+      : "Hello Indevtech, I want to ask about " + activeCategory + " project."
+    window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, "_blank")
+  }
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      {/* 4. Kirim props ke Navbar */}
       <Navbar lang={lang} setLang={setLang} />
 
-      <section className="pt-40 pb-20 px-6 border-b border-border/50 animate-fade-in-up">
+      {/* Hero Section */}
+      <section className="pt-40 pb-20 px-6 border-b border-border/50">
         <div className="max-w-7xl mx-auto">
           <div className="space-y-6 max-w-4xl">
             <span className="text-primary text-xs uppercase tracking-[0.3em] font-black">{t.hero.tag}</span>
@@ -110,34 +117,13 @@ export default function PortfolioPage() {
             </h1>
             <p className="text-muted-foreground text-xl leading-relaxed max-w-2xl">{t.hero.desc}</p>
           </div>
-
-          {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 pt-16 border-t border-border/50">
-            <div className="space-y-2">
-              <div className="text-5xl font-serif text-primary">50+</div>
-              <div className="text-muted-foreground text-sm uppercase tracking-widest">{t.hero.stats[0]}</div>
-            </div>
-            <div className="space-y-2">
-              <div className="text-5xl font-serif text-primary">35+</div>
-              <div className="text-muted-foreground text-sm uppercase tracking-widest">{t.hero.stats[1]}</div>
-            </div>
-            <div className="space-y-2">
-              <div className="text-5xl font-serif text-primary">98%</div>
-              <div className="text-muted-foreground text-sm uppercase tracking-widest">{t.hero.stats[2]}</div>
-            </div>
-            <div className="space-y-2">
-              <div className="text-5xl font-serif text-primary">24/7</div>
-              <div className="text-muted-foreground text-sm uppercase tracking-widest">{t.hero.stats[3]}</div>
-            </div>
-          </div> */}
         </div>
       </section>
 
-      <section
-        className="py-12 px-6 sticky top-20 bg-background/95 backdrop-blur-md border-b border-border/50 z-40 overflow-x-auto scrollbar-hide animate-fade-in"
-        style={{ animationDelay: "0.2s" }}
-      >
+      {/* Category Filter */}
+      <section className="py-12 px-6 sticky top-20 bg-background/95 backdrop-blur-md border-b border-border/50 z-40 overflow-x-auto scrollbar-hide">
         <div className="max-w-7xl mx-auto">
-          <div className="flex flex-nowrap md:flex-wrap gap-3 pb-2">
+          <div className="flex flex-nowrap md:flex-wrap gap-3">
             {t.categories.map((cat) => (
               <button
                 key={cat.id}
@@ -157,77 +143,86 @@ export default function PortfolioPage() {
         </div>
       </section>
 
-      <section className="py-20 px-6 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 animate-stagger-container">
-            {filteredProjects.map((project) => (
-              <div key={project.id} className="group flex flex-col gap-6 animate-stagger-item">
-                <div className="aspect-[4/3] bg-secondary/50 rounded-[40px] overflow-hidden relative shadow-2xl">
-                  <img
-                    src={`https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200&h=900`}
-                    alt={project.title}
-                    className="object-cover w-full h-full group-hover:scale-110 transition-transform duration-1000"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-8">
-                    <div className="space-y-3 w-full">
+      {/* Project Grid / Empty State */}
+      <section className="py-20 px-6 min-h-[600px] flex items-center">
+        <div className="max-w-7xl mx-auto w-full">
+          {filteredProjects.length > 0 ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
+              {filteredProjects.map((project) => (
+                <div key={project.id} className="group flex flex-col gap-6">
+                  <div className="aspect-[4/3] bg-secondary/50 rounded-[40px] overflow-hidden relative shadow-2xl">
+                    <img
+                      src={`https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200&h=900`}
+                      alt={project.title}
+                      className="object-cover w-full h-full group-hover:scale-110 transition-transform duration-1000"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-8">
                       <div className="flex flex-wrap gap-2">
                         {project.tech.map((tech, idx) => (
-                          <span
-                            key={idx}
-                            className="px-3 py-1 bg-background/80 backdrop-blur-sm border border-border/50 rounded-full text-xs uppercase tracking-wider font-bold"
-                          >
+                          <span key={idx} className="px-3 py-1 bg-background/80 backdrop-blur-sm border border-border/50 rounded-full text-[10px] uppercase tracking-wider font-bold">
                             {tech}
                           </span>
                         ))}
                       </div>
                     </div>
                   </div>
-                  <div className="absolute top-6 right-6 px-4 py-2 bg-primary/90 backdrop-blur-sm rounded-full text-primary-foreground text-xs font-bold uppercase tracking-wider">
-                    {project.year}
-                  </div>
-                </div>
-                <div className="px-2 space-y-4">
-                  <div className="flex justify-between items-start gap-4">
-                    <div className="flex-grow space-y-2">
-                      <span className="text-primary text-xs uppercase tracking-widest font-bold">{project.type}</span>
-                      <h3 className="text-3xl font-serif leading-tight group-hover:text-primary transition-colors">
-                        {project.title}
-                      </h3>
-                      <p className="text-muted-foreground leading-relaxed">{project.desc}</p>
+
+                  <div className="px-2 flex justify-between items-start gap-4">
+                    <div className="space-y-2">
+                      <span className="text-primary text-[10px] uppercase tracking-[0.2em] font-black">{project.type}</span>
+                      <h3 className="text-3xl font-serif leading-tight group-hover:text-primary transition-colors">{project.title}</h3>
+                      <p className="text-muted-foreground font-light leading-relaxed">{project.desc}</p>
                     </div>
-                    <div className="w-12 h-12 rounded-full border border-border flex items-center justify-center group-hover:bg-primary group-hover:border-primary group-hover:text-primary-foreground transition-all flex-shrink-0">
+                    <button onClick={handleContact} className="w-12 h-12 rounded-full border border-border flex items-center justify-center group-hover:bg-primary group-hover:border-primary group-hover:text-primary-foreground transition-all flex-shrink-0">
                       <ArrowRight className="w-5 h-5 -rotate-45 group-hover:rotate-0 transition-transform" />
-                    </div>
+                    </button>
                   </div>
                 </div>
+              ))}
+            </div>
+          ) : (
+            /* --- BEAUTIFUL EMPTY STATE --- */
+            <div className="max-w-2xl mx-auto text-center space-y-8 py-20 border-2 border-dashed border-border/50 rounded-[40px] bg-secondary/10 px-6">
+              <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Sparkles className="w-10 h-10 text-primary animate-pulse" />
               </div>
-            ))}
-          </div>
+              <div className="space-y-4">
+                <h3 className="text-3xl md:text-4xl font-serif leading-tight">
+                  {t.empty.title}
+                </h3>
+                <p className="text-muted-foreground text-lg leading-relaxed">
+                  {t.empty.desc}
+                </p>
+              </div>
+              <button
+                onClick={handleContact}
+                className="inline-flex items-center gap-2 text-primary font-bold hover:gap-4 transition-all group"
+              >
+                {t.empty.button} <ArrowRight className="w-5 h-5" />
+              </button>
+            </div>
+          )}
         </div>
       </section>
 
-      <section
-        className="py-32 px-6 bg-secondary/20 border-t border-border/50 animate-fade-in-up"
-        style={{ animationDelay: "0.5s" }}
-      >
+      {/* CTA Section */}
+      <section className="py-32 px-6 bg-secondary/20 border-t border-border/50">
         <div className="max-w-4xl mx-auto text-center space-y-8">
           <h2 className="text-4xl md:text-6xl font-serif leading-tight">
             {t.cta.title} <span className="text-primary italic">{t.cta.titleItalic}</span>
           </h2>
           <p className="text-muted-foreground text-xl leading-relaxed">{t.cta.desc}</p>
-          <button className="inline-flex items-center gap-3 px-10 py-5 bg-primary text-primary-foreground rounded-full font-bold hover:scale-105 transition-all shadow-lg shadow-primary/20 text-lg">
+          <button
+            onClick={handleContact}
+            className="inline-flex items-center gap-3 px-10 py-5 bg-primary text-primary-foreground rounded-full font-bold hover:scale-105 transition-all shadow-lg shadow-primary/20 text-lg"
+          >
             {t.cta.button} <ArrowRight className="w-5 h-5" />
           </button>
         </div>
       </section>
 
-      <footer
-        className="py-16 px-6 border-t border-border/50 text-center text-muted-foreground text-sm animate-fade-in-up"
-        style={{ animationDelay: "0.6s" }}
-      >
-        <p>
-          &copy; 2025 indevtech.id - {lang === "id" ? "Solusi Pengembangan Software" : "Software Development Solutions"}
-        </p>
+      <footer className="py-16 px-6 border-t border-border/50 text-center text-muted-foreground text-sm">
+        <p>&copy; 2025 indevtech.id - {lang === "id" ? "Solusi Pengembangan Software" : "Software Development Solutions"}</p>
       </footer>
     </div>
   )
