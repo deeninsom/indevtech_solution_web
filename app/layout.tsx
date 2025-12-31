@@ -13,20 +13,21 @@ const playfair = Playfair_Display({
   variable: "--font-serif",
 })
 
-// --- KONFIGURASI SEO LENGKAP KHUSUS INDEVTECH SOLUTIONS ---
+// --- KONFIGURASI SEO GLOBAL & LOKAL KHUSUS INDEVTECH SOLUTIONS ---
 export const metadata: Metadata = {
   title: {
-    default: "Indevtech Solutions | Jasa Pembuatan Website & Software Premium",
+    default: "Indevtech Solutions | Premium Software & Website Development",
     template: "%s | Indevtech Solutions"
   },
-  description: "Indevtech Solutions adalah partner pengembangan software custom, website profesional, dan desain produk digital berkualitas tinggi untuk bisnis modern di Indonesia.",
+  description: "Indevtech Solutions adalah partner global dalam pengembangan software custom, website profesional, dan desain produk digital berkualitas tinggi. Kami melayani klien di Indonesia dan seluruh dunia.",
   keywords: [
     "Indevtech Solutions",
-    "jasa pembuatan website",
     "software house Indonesia",
+    "website development",
+    "custom software",
     "digital product design",
-    "software development Jakarta",
-    "solusi IT premium"
+    "premium software solutions",
+    "IT solutions global"
   ],
   authors: [{ name: "Indevtech Team" }],
   creator: "Indevtech Solutions",
@@ -39,18 +40,22 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://indevtechsolutions.com'),
   alternates: {
     canonical: '/',
+    languages: {
+      'id': '/',
+      'en': '/en', // asumsikan versi Inggris ada di /en
+    }
   },
   openGraph: {
-    title: "Indevtech Solutions | Solusi Software & Website Premium",
-    description: "Partner terpercaya untuk pengembangan software custom, website profesional, dan desain produk digital berkualitas tinggi.",
+    title: "Indevtech Solutions | Premium Software & Website Development",
+    description: "Partner terpercaya untuk pengembangan software custom, website profesional, dan desain produk digital berkualitas tinggi. Melayani klien di Indonesia dan internasional.",
     url: 'https://indevtechsolutions.com',
     siteName: 'Indevtech Solutions',
     images: [
       {
-        url: '/og-image.jpg', // pastikan ada di folder public
+        url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Indevtech Solutions - Software & Website Premium',
+        alt: 'Indevtech Solutions - Global Software & Website Premium',
       },
     ],
     locale: 'id_ID',
@@ -58,9 +63,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Indevtech Solutions | Solusi Software & Website Premium',
-    description: 'Partner terpercaya untuk pengembangan software custom, website profesional, dan desain produk digital berkualitas tinggi.',
-    images: ['/og-image.jpg'], // pastikan ada di folder public
+    title: 'Indevtech Solutions | Premium Software & Website Development',
+    description: 'Partner global terpercaya untuk pengembangan software custom, website profesional, dan desain produk digital berkualitas tinggi.',
+    images: ['/og-image.jpg'],
   },
   robots: {
     index: true,
