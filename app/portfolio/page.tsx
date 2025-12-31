@@ -170,11 +170,11 @@ export default function PortfolioPage() {
               {filteredProjects.map((project) => (
                 <div key={project.id} className="group flex flex-col gap-8">
 
-                  {/* Image Container with Blurred Backdrop */}
+                  {/* Image Container */}
                   <div
                     onClick={() => openProject(project.url)}
                     className={cn(
-                      "aspect-[4/3] bg-secondary/30 rounded-[40px] overflow-hidden relative shadow-2xl border border-border/50 group/img",
+                      "aspect-[4/3] bg-secondary/20 rounded-[48px] overflow-hidden relative shadow-2xl border border-border/50 group/img",
                       project.url ? "cursor-pointer" : "cursor-default"
                     )}
                   >
@@ -182,16 +182,18 @@ export default function PortfolioPage() {
                     <img
                       src={project.image}
                       alt=""
-                      className="absolute inset-0 object-cover w-full h-full blur-2xl opacity-30 scale-110"
+                      className="absolute inset-0 object-cover w-full h-full blur-3xl opacity-20 scale-125"
                     />
 
-                    {/* Layer 2: Main Image (Utuh / Not Cropped) */}
-                    <div className="relative w-full h-full flex items-center justify-center p-6 md:p-10">
-                      <img
-                        src={project.image}
-                        alt={project.title}
-                        className="object-contain w-full h-full drop-shadow-2xl group-hover/img:scale-[1.02] transition-transform duration-700 ease-out"
-                      />
+                    {/* Layer 2: Main Image with soft rounding & shadow */}
+                    <div className="relative w-full h-full flex items-center justify-center p-8 md:p-14">
+                      <div className="relative w-full h-full shadow-[0_20px_50px_rgba(0,0,0,0.3)] rounded-2xl overflow-hidden transition-all duration-700 group-hover/img:scale-[1.03] group-hover/img:-translate-y-2">
+                        <img
+                          src={project.image}
+                          alt={project.title}
+                          className="object-cover w-full h-full"
+                        />
+                      </div>
                     </div>
 
                     {/* Hover Overlay */}
@@ -231,7 +233,6 @@ export default function PortfolioPage() {
               ))}
             </div>
           ) : (
-            /* --- EMPTY STATE --- */
             <div className="max-w-2xl mx-auto text-center space-y-8 py-20 border-2 border-dashed border-border/50 rounded-[40px] bg-secondary/10 px-6">
               <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Sparkles className="w-10 h-10 text-primary animate-pulse" />
