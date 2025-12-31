@@ -11,3 +11,9 @@ services:
       NODE_ENV: production
     volumes:
       - ./.env.production:/app/.env.production:ro
+    networks:
+      - web
+
+networks:
+  web:
+    external: true
