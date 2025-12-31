@@ -10,6 +10,15 @@ const nextConfig = {
 
   // 👉 optional tapi sangat disarankan
   output: "standalone",
+  async redirects() {
+    return [
+      {
+        source: '/:path*',
+        destination: 'https://indevtechsolutions.com//:path*',
+        permanent: true,
+      },
+    ]
+  },
 }
 
 export default nextConfig
