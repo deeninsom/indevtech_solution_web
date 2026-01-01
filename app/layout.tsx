@@ -6,11 +6,13 @@ import "./globals.css"
 const geistSans = Geist({
   subsets: ["latin"],
   variable: "--font-sans",
+  display: 'swap',
 })
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-serif",
+  display: 'swap',
 })
 
 // --- KONFIGURASI SEO OPTIMIZED - INDEVTECH SOLUTIONS ---
