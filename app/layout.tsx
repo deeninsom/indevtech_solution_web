@@ -13,70 +13,75 @@ const playfair = Playfair_Display({
   variable: "--font-serif",
 })
 
-// --- KONFIGURASI SEO GLOBAL & LOKAL KHUSUS INDEVTECH SOLUTIONS ---
+// --- KONFIGURASI SEO OPTIMIZED - INDEVTECH SOLUTIONS ---
 export const metadata: Metadata = {
+  metadataBase: new URL("https://indevtechsolutions.com"),
   title: {
-    default: "Indevtech Solutions | Premium Software & Website Development",
-    template: "%s | Indevtech Solutions"
+    default: "Indevtech Solutions | Custom Software & Digital Product Development",
+    template: "%s | Indevtech Solutions",
   },
-  description: "Indevtech Solutions adalah partner global dalam pengembangan software custom, website profesional, dan desain produk digital berkualitas tinggi. Kami melayani klien di Indonesia dan seluruh dunia.",
+  description:
+    "Indevtech Solutions adalah partner global dalam pengembangan software custom, website profesional, dan desain produk digital berkualitas tinggi untuk transformasi bisnis.",
   keywords: [
     "Indevtech Solutions",
-    "software house Indonesia",
-    "website development",
-    "custom software",
-    "digital product design",
-    "premium software solutions",
-    "IT solutions global"
+    "Pengembangan Software Custom",
+    "Website Profesional",
+    "Desain Produk Digital",
+    "Digital Product Development",
+    "Web Development Indonesia",
+    "Custom Software Solutions"
   ],
-  authors: [{ name: "Indevtech Team" }],
+  authors: [{ name: "Indevtech Solutions" }],
   creator: "Indevtech Solutions",
-  publisher: "Indevtech Solutions",
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
-  },
-  metadataBase: new URL('https://indevtechsolutions.com'),
+
+  // Penanganan URL agar tidak dianggap duplikat oleh Google
   alternates: {
-    canonical: '/',
-    languages: {
-      'id': '/',
-      'en': '/en', // asumsikan versi Inggris ada di /en
-    }
+    canonical: "/",
   },
-  openGraph: {
-    title: "Indevtech Solutions | Premium Software & Website Development",
-    description: "Partner terpercaya untuk pengembangan software custom, website profesional, dan desain produk digital berkualitas tinggi. Melayani klien di Indonesia dan internasional.",
-    url: 'https://indevtechsolutions.com',
-    siteName: 'Indevtech Solutions',
-    images: [
-      {
-        url: '/og-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Indevtech Solutions - Global Software & Website Premium',
-      },
-    ],
-    locale: 'id_ID',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Indevtech Solutions | Premium Software & Website Development',
-    description: 'Partner global terpercaya untuk pengembangan software custom, website profesional, dan desain produk digital berkualitas tinggi.',
-    images: ['/og-image.jpg'],
-  },
+
+  // Pengaturan Robot Mesin Pencari
   robots: {
     index: true,
     follow: true,
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
       'max-image-preview': 'large',
-      'max-snippet': -1,
     },
+  },
+
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/icon.png", type: "image/png" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: "/apple-icon.png",
+  },
+
+  openGraph: {
+    title: "Indevtech Solutions - Custom Software & Digital Product",
+    description:
+      "Partner global untuk pengembangan software custom, website, dan desain produk digital berkualitas tinggi.",
+    url: "https://indevtechsolutions.com",
+    siteName: "Indevtech Solutions",
+    images: [
+      {
+        url: "/logo-web.png",
+        width: 1200,
+        height: 630,
+        alt: "Indevtech Solutions - Digital Innovation",
+      },
+    ],
+    locale: "id_ID",
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Indevtech Solutions | Digital Product Development",
+    description: "Pengembangan software custom dan website profesional dengan standar kualitas tinggi.",
+    images: ["/logo-web.png"],
   },
 }
 
