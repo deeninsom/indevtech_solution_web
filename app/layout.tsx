@@ -83,6 +83,10 @@ export const metadata: Metadata = {
     description: "Pengembangan software custom dan website profesional dengan standar kualitas tinggi.",
     images: ["/logo-web.png"],
   },
+
+  verification: {
+    google: '6NQ7STPbqvQgTqKYuHBjHCZDUdn3TOpk'
+  }
 }
 
 export default function RootLayout({
@@ -92,6 +96,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="id" className={`${geistSans.variable} ${playfair.variable} scroll-smooth`}>
+      <meta name="google-site-verification" content="u-J4nkwlrW-6NQ7STPbqvQgTqKYuHBjHCZDUdn3TOpk" />
       <body className="font-sans antialiased bg-background text-foreground selection:bg-primary selection:text-primary-foreground">
         {children}
       </body>
