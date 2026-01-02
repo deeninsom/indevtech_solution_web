@@ -25,7 +25,11 @@ export const metadata: Metadata = {
   description:
     "Indevtech Solutions adalah partner global dalam pengembangan software custom, website profesional, dan desain produk digital berkualitas tinggi untuk transformasi bisnis.",
   keywords: [
+    "Indevtech",
+    "indevtech",
+    "indev",
     "Indevtech Solutions",
+    "indevtech solutions",
     "Pengembangan Software Custom",
     "Website Profesional",
     "Desain Produk Digital",
