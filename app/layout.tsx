@@ -73,7 +73,7 @@ export const metadata: Metadata = {
     siteName: "Indevtech Solutions",
     images: [
       {
-        url: "/logo-web.png",
+        url: "/logo-thumbnail.png",
         width: 1200,
         height: 630,
         alt: "Indevtech Solutions - Digital Innovation",
