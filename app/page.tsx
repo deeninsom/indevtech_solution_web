@@ -363,21 +363,41 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="group relative p-8 rounded-[32px] bg-primary text-primary-foreground space-y-8 shadow-2xl hover:-translate-y-2 transition-all duration-500 flex flex-col justify-between overflow-hidden">
-                <div className="relative space-y-6">
-                  <div className="flex items-center gap-3 border-b border-white/10 pb-4">
-                    <div className="w-10 h-10 rounded-2xl bg-white/10 flex items-center justify-center text-white transition-all">
-                      <Mail className="w-5 h-5" aria-hidden="true" />
+              <div className="group relative p-8 rounded-[32px] bg-primary text-primary-foreground shadow-2xl hover:-translate-y-2 transition-all duration-500 flex flex-col justify-between overflow-hidden border border-white/5">
+                <div className="relative space-y-8">
+                  {/* Header Section */}
+                  <div className="flex items-center gap-4 border-b border-white/10 pb-6">
+                    <div className="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center text-white transition-all group-hover:scale-110 group-hover:bg-white/20">
+                      <Mail className="w-6 h-6" aria-hidden="true" />
                     </div>
-                    <span className="uppercase tracking-[0.3em] font-black text-[10px] text-white/60">{t.footer.labels.channels}</span>
+                    <div className="flex flex-col">
+                      <span className="uppercase tracking-[0.2em] font-bold text-[10px] text-white/50 leading-none">
+                        {t.footer.labels.channels}
+                      </span>
+                      <span className="text-sm font-medium text-white/80">Get in touch</span>
+                    </div>
                   </div>
-                  <div className="space-y-4">
-                    <a href="mailto:hello@indevtechsolutions.com" className="block text-xl md:text-2xl font-serif tracking-tight hover:underline underline-offset-4 decoration-white/30">
-                      hello@indevtechsolutions.com
-                    </a>
-                    <button onClick={handleContact} className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 rounded-full text-sm font-medium hover:bg-white hover:text-primary transition-all">
-                      <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" aria-hidden="true" />
-                      +62 838-7799-5846
+
+                  {/* Contact Info Section */}
+                  <div className="space-y-6">
+                    <div className="space-y-2">
+                      <a
+                        href="mailto:hello@indevtechsolutions.com"
+                        className="block text-xl md:text-2xl font-semibold tracking-tight hover:text-white transition-colors break-all underline-offset-8 hover:underline decoration-white/20"
+                      >
+                        indevtechsolutions@gmail.com
+                      </a>
+                    </div>
+
+                    <button
+                      onClick={handleContact}
+                      className="inline-flex items-center gap-3 px-5 py-2.5 bg-white/10 rounded-full text-sm font-semibold hover:bg-white hover:text-primary transition-all duration-300 group/btn"
+                    >
+                      <span className="relative flex h-2 w-2">
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                        <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                      </span>
+                      <span className="tracking-wide">+62 838-7799-5846</span>
                     </button>
                   </div>
                 </div>

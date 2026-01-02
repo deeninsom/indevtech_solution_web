@@ -87,7 +87,8 @@ export function Navbar({ lang, setLang }: NavbarProps) {
               { n: t.services, h: "/#services" },
               { n: t.portfolio, h: "/portfolio" },
               { n: t.process, h: "/#process" },
-              { n: t.about, h: "/#about" }
+              // { n: t.about, h: "/#about" }
+              // { n: t.contact, h: "/#contact" }
             ].map((link) => (
               <Link
                 key={link.n}
@@ -156,7 +157,8 @@ export function Navbar({ lang, setLang }: NavbarProps) {
                 { n: t.services, h: "/#services" },
                 { n: t.portfolio, h: "/portfolio" },
                 { n: t.process, h: "/#process" },
-                { n: t.about, h: "/#about" }
+                // { n: t.about, h: "/#about" },
+                // { n: t.contact, h: "/#contact" }
               ].map((link, i) => (
                 <Link
                   key={link.n}

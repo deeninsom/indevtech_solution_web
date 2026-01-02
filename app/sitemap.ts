@@ -7,13 +7,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: baseUrl,
       lastModified,
-      changeFrequency: 'monthly',
       priority: 1,
     },
     {
       url: `${baseUrl}/portfolio`,
       lastModified,
-      changeFrequency: 'monthly',
       priority: 0.8,
     }
   ]
