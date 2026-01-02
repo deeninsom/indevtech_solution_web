@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import Link from "next/link"
 import { cn } from "@/lib/utils"
 import { Menu, X, Languages, ArrowRight } from "lucide-react"
+import Image from "next/image"
 
 interface NavbarProps {
   lang: "id" | "en"
@@ -69,7 +70,15 @@ export function Navbar({ lang, setLang }: NavbarProps) {
           onClick={() => setMobileMenuOpen(false)}
           aria-label="Indevtech Solutions Home"
         >
-          <div className="flex flex-col justify-center border-r border-border/50 pr-2">
+          <Image
+            src="/logo.png"
+            alt="Indevtech Solutions Logo"
+            width={120}
+            height={1}
+            priority
+            className=" object-contain"
+          />
+          {/* <div className="flex flex-col justify-center border-r border-border/50 pr-2">
             <span className="text-lg font-black tracking-tighter text-foreground uppercase leading-none">
               indev<span className="text-primary">tech</span>
             </span>
@@ -77,7 +86,7 @@ export function Navbar({ lang, setLang }: NavbarProps) {
               solutions
             </span>
           </div>
-          <span className="flex h-1.5 w-1.5 rounded-full bg-primary group-hover:animate-ping" aria-hidden="true" />
+          <span className="flex h-1.5 w-1.5 rounded-full bg-primary group-hover:animate-ping" aria-hidden="true" /> */}
         </Link>
 
         {/* RIGHT: DESKTOP NAV & TOOLS */}
