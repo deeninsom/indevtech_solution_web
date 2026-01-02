@@ -58,11 +58,11 @@ export const metadata: Metadata = {
 
   icons: {
     icon: [
-      { url: "/icon.png" },
-      { url: "/icon.png", type: "image/png" },
+      { url: "/favicon.ico" },
+      { url: "/favicon-32x32.png", type: "image/png" },
     ],
-    shortcut: "/favicon.png",
-    apple: "/apple-icon.png",
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
   },
 
   openGraph: {
@@ -85,7 +85,7 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Indevtech Solutions | Digital Product Development",
+    title: "Indevtech Solutions - Custom Software & Digital Product",
     description: "Pengembangan software custom dan website profesional dengan standar kualitas tinggi.",
     images: ["/logo-web.png"],
   },
@@ -102,7 +102,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="id" className={`${geistSans.variable} ${playfair.variable} scroll-smooth`}>
-      <meta name="google-site-verification" content="u-J4nkwlrW-6NQ7STPbqvQgTqKYuHBjHCZDUdn3TOpk" />
+      <head>
+        <meta
+          name="google-site-verification"
+          content="u-J4nkwlrW-6NQ7STPbqvQgTqKYuHBjHCZDUdn3TOpk"
+        />
+      </head>
       <body className="font-sans antialiased bg-background text-foreground selection:bg-primary selection:text-primary-foreground">
         {children}
       </body>
