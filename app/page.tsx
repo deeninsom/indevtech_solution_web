@@ -80,6 +80,12 @@ const content = {
       ctaBtn: "Hubungi Kami",
       tagline: "Partner pengembangan software untuk website dan aplikasi yang siap digunakan.",
       labels: { connectivity: "Koneksi", channels: "Hubungi Melalui" },
+      supportText: {
+        line1: "Beroperasi sepenuhnya secara ",
+        highlight1: "online",
+        line2: ", berbasis di ",
+        highlight2: "Surabaya, ID."
+      },
       nav: {
         company: { title: "Navigasi", links: [{ n: "Karya", h: "#services" }, { n: "Tentang Kami", h: "#about" }, { n: "Proses", h: "#process" }] },
         social: { title: "Ruang Sosial", links: ["LinkedIn", "Instagram", "Twitter X"] }
@@ -131,6 +137,12 @@ const content = {
       ctaBtn: "Contact Us",
       tagline: "A software development partner for production-ready websites and applications.",
       labels: { connectivity: "Connectivity", channels: "Contact Via" },
+      supportText: {
+        line1: "Operating fully ",
+        highlight1: "online",
+        line2: ", based in ",
+        highlight2: "Surabaya, ID."
+      },
       nav: {
         company: { title: "Navigation", links: [{ n: "Services", h: "#services" }, { n: "About Us", h: "#about" }, { n: "Process", h: "#process" }] },
         social: { title: "Social", links: ["LinkedIn", "Instagram", "Twitter X"] }
@@ -354,10 +366,12 @@ export default function Home() {
                     <span className="text-primary uppercase tracking-[0.3em] font-black text-[10px]">{t.footer.labels.connectivity}</span>
                   </div>
                   <div>
-                    {/* FIXED: H4 changed to H3 */}
                     <h3 className="text-2xl font-serif mb-2">Digital Support</h3>
                     <p className="text-muted-foreground font-light leading-relaxed">
-                      Beroperasi sepenuhnya secara <span className="font-medium text-foreground">online</span>, berbasis di <span className="font-medium text-primary/80">Surabaya, ID.</span>
+                      {t.footer.supportText.line1}
+                      <span className="font-medium text-foreground">{t.footer.supportText.highlight1}</span>
+                      {t.footer.supportText.line2}
+                      <span className="font-medium text-primary/80">{t.footer.supportText.highlight2}</span>
                     </p>
                   </div>
                 </div>
