@@ -37,18 +37,18 @@ const clientLogos = [
 const content = {
   id: {
     hero: {
-      badge: "Custom Software Development",
+      badge: "CUSTOM SOFTWARE & INTERNAL SYSTEM",
       title: "Solusi Software",
-      titleItalic: "Untuk Pertumbuhan Bisnis.",
-      desc: "Indevtech Solutions menyediakan layanan pengembangan software kustom untuk bisnis dan startup, mulai dari aplikasi web, mobile, hingga sistem terintegrasi yang dirancang untuk performa, keamanan, dan skalabilitas jangka panjang.",
-      btns: ["Diskusi Kebutuhan"]
+      titleItalic: "yang Mendukung Pertumbuhan Bisnis.",
+      desc: "Indevtech Solutions membantu bisnis dan startup membangun software kustom yang rapi, mudah digunakan tim, dan siap dikembangkan dalam jangka panjang — mulai dari aplikasi web, mobile, hingga sistem internal terintegrasi.",
+      btns: ["Diskusikan Kebutuhan Project"]
     },
     clients: "Berkolaborasi Dengan Visi-Visi Hebat",
     services: {
       tag: "Layanan Kami",
       title: "Jasa Pengembangan",
       titleItalic: "Software.",
-      desc: "Kami fokus pada pengembangan dan pengerjaan software sesuai kebutuhan, mulai dari website sederhana hingga aplikasi custom dan mobile.",
+      desc: "Kami fokus pada pengembangan software berdasarkan kebutuhan nyata bisnis, mulai dari website sederhana hingga sistem custom dan aplikasi mobile yang mendukung operasional dan pertumbuhan.",
       items: [
         { title: "Website Basic (Company Profile)", desc: "Pembuatan website company profile, landing page, atau website usaha sederhana yang profesional, cepat, dan mudah dikelola.", icon: Globe },
         { title: "Website Custom", desc: "Pengembangan website custom sesuai kebutuhan bisnis Anda, termasuk sistem internal, dashboard, dan fitur khusus.", icon: Code },
@@ -61,7 +61,7 @@ const content = {
       tag: "Proses Kerja",
       title: "Alur Pengerjaan",
       titleItalic: "Yang Sederhana.",
-      desc: "Kami menggunakan alur kerja yang jelas dan transparan agar proyek berjalan efisien dan sesuai kebutuhan.",
+      desc: "Kami menggunakan alur kerja yang jelas, transparan, dan terstruktur agar proyek berjalan efisien, terkontrol, dan sesuai kebutuhan bisnis.",
       steps: [
         { title: "Diskusi Kebutuhan", desc: "Kami membahas tujuan, fitur, dan ruang lingkup proyek agar kebutuhan Anda jelas sejak awal.", icon: MessageSquare },
         { title: "Perencanaan", desc: "Kami menyusun gambaran awal seperti alur sistem atau tampilan sebagai acuan pengerjaan.", icon: Search },
@@ -94,18 +94,18 @@ const content = {
   },
   en: {
     hero: {
-      badge: "Custom Software Development",
+      badge: "CUSTOM SOFTWARE & INTERNAL SYSTEM",
       title: "Software Solutions",
-      titleItalic: "For Business Growth.",
-      desc: "Indevtech Solutions provides custom software development services for businesses and startups, including web applications, mobile apps, and integrated systems built for performance, security, and long-term scalability.",
-      btns: ["Discuss Requirements"]
+      titleItalic: "That Support Business Growth.",
+      desc: "Indevtech Solutions helps businesses and startups build custom software that is structured, easy to use by teams, and designed for long-term scalability — from web and mobile applications to integrated internal systems.",
+      btns: ["Discuss Project Requirements"]
     },
     clients: "Collaborating With Vision-Driven Clients",
     services: {
       tag: "Our Services",
       title: "Software Development",
       titleItalic: "Services.",
-      desc: "We focus on building software based on real needs, from simple websites to custom systems and mobile applications.",
+      desc: "We focus on software development based on real business needs, ranging from simple websites to custom systems and mobile applications that support operations and drive growth.",
       items: [
         { title: "Basic Website (Company Profile)", desc: "Development of company profile websites, landing pages, or simple business websites that are professional, fast, and easy to manage.", icon: Globe },
         { title: "Custom Website", desc: "Custom website development tailored to your business needs, including internal systems, dashboards, and specific features.", icon: Code },
@@ -118,7 +118,7 @@ const content = {
       tag: "Process",
       title: "A Simple",
       titleItalic: "Workflow.",
-      desc: "We use a clear and transparent workflow to ensure projects are delivered efficiently and meet expectations.",
+      desc: "We follow a clear and transparent workflow, structured to keep projects efficient, well-managed, and fully aligned with business goals.",
       steps: [
         { title: "Requirements Discussion", desc: "We discuss goals, features, and project scope to ensure everything is clearly defined from the start.", icon: MessageSquare },
         { title: "Planning", desc: "We prepare initial plans such as system flows or interface outlines as a development reference.", icon: Search },
@@ -457,7 +457,7 @@ export default function Home() {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.5, y: 20 }}
             onClick={scrollToTop}
-            className="fixed bottom-8 right-8 z-50 w-14 h-14 bg-primary text-primary-foreground rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform"
+            className="fixed bottom-8 right-8 z-50 w-14 h-14 cursor-pointer bg-primary text-primary-foreground rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform"
             aria-label="Back to Top"
           >
             <ChevronUp className="w-6 h-6" aria-hidden="true" />
