@@ -71,27 +71,51 @@ export default function PortfolioPage() {
   const projects = [
     {
       id: 1,
-      title: "PT Yama Electrical Support",
-      category: "basic",
-      type: "Company Profile Website",
-      desc: lang === "id"
-        ? "Melayani perencanaan, instalasi, hingga pemeliharaan sistem elektrikal dan otomasi, serta pengembangan aplikasi berbasis kebutuhan industri."
-        : "Providing planning, installation, to maintenance of electrical and automation systems, and custom industrial application development.",
-      year: "2024",
-      image: "/portofolio/yama-web.png",
-      url: "",
-    },
-    {
-      id: 2,
       title: "PT Wibawa Jati Putra",
       category: "basic",
       type: "Company Profile Website",
       desc: lang === "id"
         ? "Website profil perusahaan untuk penyedia jasa konstruksi, perawatan mesin industri, dan general supplies."
         : "Corporate profile website for construction services, industrial machine maintenance, and general supplies.",
-      year: "2024",
-      image: "/portofolio/wjp-web.png",
+      year: "2025",
+      image: "/portofolio/mockup-wjp.png",
       url: "https://wibawajatiputra.com",
+    },
+    {
+      id: 2,
+      title: "PT New Star Asia",
+      category: "basic",
+      type: "Company Profile Website",
+      desc: lang === "id"
+        ? "Mitra produksi alas kaki terpercaya, menghadirkan standar kualitas tinggi untuk sneakers dan sandal."
+        : "Trusted footwear production partner, delivering high quality standards for sneakers and sandals.",
+      year: "2026",
+      image: "/portofolio/mockup-newfei.png",
+      url: "https://newfeiofficial.com",
+    },
+    {
+      id: 3,
+      title: "PT Mitrakon Persada Abadi",
+      category: "basic",
+      type: "Company Profile Website",
+      desc: lang === "id"
+        ? "Layanan terpadu desain, instalasi, dan pemeliharaan Fire Alarm, Hydrant, hingga Suppression System sesuai standar NFPA & SNI."
+        : "Integrated services for design, installation, and maintenance of Fire Alarm, Hydrant, and Suppression Systems in accordance with NFPA & SNI standards.",
+      year: "2026",
+      image: "/portofolio/mockup-mitrakon.png",
+      url: "https://mitrakon.co.id",
+    },
+    {
+      id: 4,
+      title: "PT Maju Inspirasi Bangsa",
+      category: "basic",
+      type: "Company Profile Website",
+      desc: lang === "id"
+        ? "Solusi acara profesional serba guna."
+        : "Professional all in one event solutions",
+      year: "2026",
+      image: "/portofolio/mockup-abeventorg.png",
+      url: "https://abeventorg.com/",
     }
   ]
 
@@ -167,7 +191,7 @@ export default function PortfolioPage() {
                   onClick={() => setActiveCategory(cat.id)}
                   aria-pressed={activeCategory === cat.id}
                   className={cn(
-                    "px-6 py-3 rounded-full border text-sm font-medium uppercase tracking-wider transition-all flex items-center gap-2 whitespace-nowrap",
+                    "px-6 py-3 rounded-full border text-sm cursor-pointer font-medium uppercase tracking-wider transition-all flex items-center gap-2 whitespace-nowrap",
                     activeCategory === cat.id
                       ? "bg-primary text-primary-foreground border-primary shadow-lg shadow-primary/20"
                       : "border-border/50 hover:border-primary/50 hover:bg-secondary/50",
@@ -182,22 +206,27 @@ export default function PortfolioPage() {
         </nav>
 
         {/* Project Grid */}
-        <section className="py-20 px-6 min-h-[600px] flex items-center" aria-label="Portfolio gallery">
+        <section
+          className="py-20 px-6 min-h-[600px] flex items-center"
+          aria-label="Portfolio gallery"
+        >
           <div className="max-w-7xl mx-auto w-full">
             {filteredProjects.length > 0 ? (
               <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20">
                 {filteredProjects.map((project) => (
-                  <article key={project.id} className="group flex flex-col gap-8"> {/* SEO: Semantic Article */}
-
+                  <article
+                    key={project.id}
+                    className="group flex flex-col gap-8"
+                  >
                     {/* Image Container */}
                     <div
                       onClick={() => openProject(project.url)}
                       className={cn(
-                        "aspect-[4/3] bg-secondary/20 rounded-[48px] overflow-hidden relative shadow-2xl border border-border/50 group/img",
+                        "aspect-[4/3] bg-secondary/10 rounded-[48px] overflow-hidden relative shadow-2xl border border-border/50 group/img",
                         project.url ? "cursor-pointer" : "cursor-default"
                       )}
                     >
-                      {/* Layer 1: Blurred Background - Hidden from Screen Readers */}
+                      {/* Blurred Background */}
                       <img
                         src={project.image}
                         alt=""
@@ -205,14 +234,14 @@ export default function PortfolioPage() {
                         className="absolute inset-0 object-cover w-full h-full blur-3xl opacity-20 scale-125"
                       />
 
-                      {/* Layer 2: Main Image */}
-                      <div className="relative w-full h-full flex items-center justify-center p-8 md:p-14">
-                        <div className="relative w-full h-full shadow-[0_20px_50px_rgba(0,0,0,0.3)] rounded-2xl overflow-hidden transition-all duration-700 group-hover/img:scale-[1.03] group-hover/img:-translate-y-2">
+                      {/* Main Image */}
+                      <div className="relative w-full h-full flex items-center justify-center p-12 md:p-16">
+                        <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.3)] transition-all duration-700 group-hover/img:scale-[1.03] group-hover/img:-translate-y-2">
                           <img
                             src={project.image}
-                            alt={`Preview project ${project.title}`} // SEO: Alt text yang relevan
+                            alt={`Preview project ${project.title}`}
                             loading="lazy"
-                            className="object-cover w-full h-full"
+                            className="object-contain w-full h-full"
                           />
                         </div>
                       </div>
@@ -222,7 +251,7 @@ export default function PortfolioPage() {
                         <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover/img:opacity-100 transition-opacity duration-500 flex items-center justify-center z-10">
                           <div className="bg-background/90 backdrop-blur-sm px-6 py-3 rounded-full shadow-xl translate-y-4 group-hover/img:translate-y-0 transition-transform duration-500 border border-border/50">
                             <span className="text-sm font-bold uppercase tracking-widest text-foreground">
-                              {lang === 'id' ? 'Lihat Website' : 'Visit Website'}
+                              {lang === "id" ? "Lihat Website" : "Visit Website"}
                             </span>
                           </div>
                         </div>
@@ -233,14 +262,27 @@ export default function PortfolioPage() {
                     <div className="px-2 flex justify-between items-start gap-6">
                       <div className="space-y-3">
                         <div className="flex items-center gap-3">
-                          <span className="text-primary text-[10px] uppercase tracking-[0.2em] font-black">{project.type}</span>
-                          <span className="text-muted-foreground/40 text-[10px]" aria-hidden="true">—</span>
-                          <span className="text-muted-foreground text-[10px] font-bold">{project.year}</span>
+                          <span className="text-primary text-[10px] uppercase tracking-[0.2em] font-black">
+                            {project.type}
+                          </span>
+                          <span
+                            className="text-muted-foreground/40 text-[10px]"
+                            aria-hidden="true"
+                          >
+                            —
+                          </span>
+                          <span className="text-muted-foreground text-[10px] font-bold">
+                            {project.year}
+                          </span>
                         </div>
+
                         <h2 className="text-3xl md:text-4xl font-serif leading-tight group-hover:text-primary transition-colors">
                           {project.title}
                         </h2>
-                        <p className="text-muted-foreground font-light leading-relaxed max-w-lg">{project.desc}</p>
+
+                        <p className="text-muted-foreground font-light leading-relaxed max-w-lg">
+                          {project.desc}
+                        </p>
                       </div>
 
                       {project.url && (
@@ -249,7 +291,10 @@ export default function PortfolioPage() {
                           aria-label={`Open ${project.title} website`}
                           className="w-14 h-14 rounded-full border border-border flex items-center justify-center group-hover:bg-primary group-hover:border-primary group-hover:text-primary-foreground transition-all flex-shrink-0"
                         >
-                          <ArrowRight className="w-6 h-6 -rotate-45 group-hover:rotate-0 transition-transform" aria-hidden="true" />
+                          <ArrowRight
+                            className="w-6 h-6 -rotate-45 group-hover:rotate-0 transition-transform"
+                            aria-hidden="true"
+                          />
                         </button>
                       )}
                     </div>
@@ -259,14 +304,28 @@ export default function PortfolioPage() {
             ) : (
               <div className="max-w-2xl mx-auto text-center space-y-8 py-20 border-2 border-dashed border-border/50 rounded-[40px] bg-secondary/10 px-6">
                 <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Sparkles className="w-10 h-10 text-primary animate-pulse" aria-hidden="true" />
+                  <Sparkles
+                    className="w-10 h-10 text-primary animate-pulse"
+                    aria-hidden="true"
+                  />
                 </div>
+
                 <div className="space-y-4">
-                  <h3 className="text-3xl md:text-4xl font-serif leading-tight">{t.empty.title}</h3>
-                  <p className="text-muted-foreground text-lg leading-relaxed">{t.empty.desc}</p>
+                  <h3 className="text-3xl md:text-4xl font-serif leading-tight">
+                    {t.empty.title}
+                  </h3>
+
+                  <p className="text-muted-foreground text-lg leading-relaxed">
+                    {t.empty.desc}
+                  </p>
                 </div>
-                <button onClick={handleContact} className="inline-flex items-center gap-2 text-primary font-bold hover:gap-4 transition-all group">
-                  {t.empty.button} <ArrowRight className="w-5 h-5" aria-hidden="true" />
+
+                <button
+                  onClick={handleContact}
+                  className="inline-flex items-center gap-2 text-primary font-bold hover:gap-4 transition-all group"
+                >
+                  {t.empty.button}
+                  <ArrowRight className="w-5 h-5" aria-hidden="true" />
                 </button>
               </div>
             )}
