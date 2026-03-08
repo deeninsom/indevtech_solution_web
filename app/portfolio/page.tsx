@@ -116,6 +116,18 @@ export default function PortfolioPage() {
       year: "2026",
       image: "/portofolio/mockup-abeventorg.png",
       url: "https://abeventorg.com/",
+    },
+    {
+      id: 4,
+      title: "PT Yama Electrical Support",
+      category: "basic",
+      type: "Company Profile Website",
+      desc: lang === "id"
+        ? "Solusi PLC, HMI, SCADA, hingga AGV untuk meningkatkan efisiensi operasional industri Anda sesuai standar internasional."
+        : "PLC, HMI, SCADA, and AGV solutions to improve your industrial operational efficiency according to international standards.",
+      year: "2026",
+      image: "/portofolio/mockup-yama.png",
+      url: "https://yamaelectricalcom/",
     }
   ]
 
@@ -213,9 +225,9 @@ export default function PortfolioPage() {
           <div className="max-w-7xl mx-auto w-full">
             {filteredProjects.length > 0 ? (
               <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20">
-                {filteredProjects.map((project) => (
+                {filteredProjects.map((project, id) => (
                   <article
-                    key={project.id}
+                    key={id}
                     className="group flex flex-col gap-8"
                   >
                     {/* Image Container */}
