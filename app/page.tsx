@@ -29,9 +29,11 @@ const staggerContainer: Variants = {
 
 // --- Data ---
 const clientLogos = [
-  { name: "PT Wibawa Jati Putra", url: "/partners/wjp-logo.jpeg" },
-  { name: "PT Yama Electrical Support", url: "/partners/yama-electrical.png" },
-  { name: "PT AMJ", url: "/partners/amj.jpeg" }
+  { name: "PT Wibawa Jati Putra", url: "/partners/logo-wjp.png" },
+  { name: "PT New Star Asia", url: "/partners/logo-newfei.png" },
+  { name: "PT Yama Electrical Support", url: "/partners/logo-yama.png" },
+  { name: "PT AMJ", url: "/partners/logo-amj.png" },
+  { name: "PT Maju Inspirasi Bangsa", url: "/partners/logo-abevent.png" }
 ];
 
 const content = {
@@ -248,7 +250,7 @@ export default function Home() {
             transition={{ ease: "linear", duration: 25, repeat: Infinity }}
           >
             {[...clientLogos, ...clientLogos, ...clientLogos, ...clientLogos].map((logo, i) => (
-              <div key={i} className="relative shrink-0 w-32 h-12 md:w-40 md:h-16 flex items-center justify-center grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all duration-500 px-4">
+              <div key={i} className="relative shrink-0 w-32 h-12 md:w-40 md:h-16 flex items-center justify-center transition-all duration-500 px-4">
                 <Image
                   src={logo.url}
                   alt={`Partner: ${logo.name}`}
