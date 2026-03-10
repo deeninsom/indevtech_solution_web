@@ -4,7 +4,7 @@
     "title": "Building Digital Solutions\nWithout Compromise.",
     "description": "indevtech.id brings world-class technology for ambitious businesses. We combine solid software architecture with stunning interface design.",
     "ctaProject": "Start Project",
-    "ctaPortfolio": "Our Works"
+    "ctaportofolio": "Our Works"
   },
   "services": {
     "title": "Software Development Solutions.",
@@ -77,7 +77,7 @@
   "projects": {
     "title": "Selected Works",
     "desc": "Digital innovations delivering real impact.",
-    "button": "View All Portfolio",
+    "button": "View All portofolio",
     "items": [
       {
         "title": "Lumina Enterprise",

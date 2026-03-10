@@ -18,7 +18,7 @@ export function Navbar({ lang, setLang }: NavbarProps) {
   const menuContent = {
     id: {
       services: "Layanan",
-      portfolio: "Portfolio",
+      portofolio: "portofolio",
       process: "Proses",
       about: "Tentang",
       contact: "Mulai Proyek",
@@ -27,7 +27,7 @@ export function Navbar({ lang, setLang }: NavbarProps) {
     },
     en: {
       services: "Services",
-      portfolio: "Portfolio",
+      portofolio: "portofolio",
       process: "Process",
       about: "About",
       contact: "Start Project",
@@ -94,7 +94,7 @@ export function Navbar({ lang, setLang }: NavbarProps) {
           <div className="flex items-center gap-6">
             {[
               { n: t.services, h: "/#services" },
-              { n: t.portfolio, h: "/portofolio" },
+              { n: t.portofolio, h: "/portofolio" },
               { n: t.process, h: "/#process" },
               // { n: t.about, h: "/#about" }
               // { n: t.contact, h: "/#contact" }
@@ -164,7 +164,7 @@ export function Navbar({ lang, setLang }: NavbarProps) {
             <div className="flex flex-col gap-2">
               {[
                 { n: t.services, h: "/#services" },
-                { n: t.portfolio, h: "/portfolio" },
+                { n: t.portofolio, h: "/portofolio" },
                 { n: t.process, h: "/#process" },
                 // { n: t.about, h: "/#about" },
                 // { n: t.contact, h: "/#contact" }

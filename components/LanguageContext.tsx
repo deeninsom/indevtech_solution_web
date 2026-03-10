@@ -9,7 +9,7 @@ export interface LanguageTexts {
     title: string;
     description: string;
     ctaProject: string;
-    ctaPortfolio: string;
+    ctaportofolio: string;
   };
   services: {
     title: string;
@@ -61,7 +61,7 @@ const LANGUAGE_TEXTS: Record<"id" | "en", LanguageTexts> = {
       title: "Membangun Solusi Digital\nTanpa Kompromi.",
       description: "indevtech.id menghadirkan teknologi kelas dunia untuk bisnis yang ambisius.",
       ctaProject: "Mulai Proyek",
-      ctaPortfolio: "Karya Kami",
+      ctaportofolio: "Karya Kami",
     },
     services: {
       title: "Solusi Pengembangan Software",
@@ -133,7 +133,7 @@ const LANGUAGE_TEXTS: Record<"id" | "en", LanguageTexts> = {
       title: "Building Digital Solutions\nWithout Compromise.",
       description: "indevtech.id delivers world-class technology for ambitious businesses.",
       ctaProject: "Start Project",
-      ctaPortfolio: "Our Work",
+      ctaportofolio: "Our Work",
     },
     services: {
       title: "Software Development Solutions",
@@ -175,7 +175,7 @@ const LANGUAGE_TEXTS: Record<"id" | "en", LanguageTexts> = {
         { title: "Aura Marketplace", category: "E-Commerce Experience" },
         { title: "Nexus CRM", category: "Internal Operations System" },
       ],
-      button: "View All Portfolio",
+      button: "View All portofolio",
     },
     whyUs: {
       title: "Why indevtech.id?",

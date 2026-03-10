@@ -15,7 +15,7 @@ const fadeInUp: Variants = {
   }
 }
 
-export default function PortfolioPage() {
+export default function portofolioPage() {
   const [lang, setLang] = useState<"id" | "en">("id")
 
   const dict = {
