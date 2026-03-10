@@ -2,12 +2,28 @@
 
 import { useState, useEffect, useMemo } from "react"
 import Link from "next/link"
-import Image from "next/image" // Import Next Image
+import Image from "next/image"
 import { motion, Variants, AnimatePresence } from "framer-motion"
-import { Navbar } from "@/components/navbar"
+import { Navbar } from "@/components/navbar" // Pastikan path ini benar
 import {
-  ArrowRight, Code, Smartphone, Zap, Rocket, MessageSquare,
-  Layers, ShieldCheck, Globe, Mail, Search, ChevronUp
+  ArrowRight,
+  Code,
+  Zap,
+  Rocket,
+  ShieldCheck,
+  Globe,
+  Mail,
+  Search,
+  ChevronUp,
+  Workflow,
+  Cpu,
+  RefreshCcw,
+  ShieldAlert,
+  BarChart3,
+  CheckCircle2,
+  CalendarClock,
+  Network,
+  TerminalSquare
 } from "lucide-react"
 
 // --- Animation Variants ---
@@ -39,48 +55,93 @@ const clientLogos = [
 const content = {
   id: {
     hero: {
-      badge: "CUSTOM SOFTWARE & INTERNAL SYSTEM",
-      title: "Solusi Software",
-      titleItalic: "yang Mendukung Pertumbuhan Bisnis.",
-      desc: "Indevtech Solutions membantu bisnis dan startup membangun software kustom yang rapi, mudah digunakan tim, dan siap dikembangkan dalam jangka panjang — mulai dari aplikasi web, mobile, hingga sistem internal terintegrasi.",
-      btns: ["Diskusikan Kebutuhan Project"]
+      badge: "Business Automation Partner",
+      title: "Otomatisasi & Integrasi",
+      titleItalic: "Untuk Skala Bisnis Anda.",
+      desc: "Kami merancang ekosistem software kustom yang mengubah proses manual yang rentan error menjadi alur kerja otomatis, aman, dan terukur. Fokus pada pertumbuhan, biarkan sistem yang bekerja.",
+      btns: ["Jadwalkan Konsultasi", "Pelajari Solusi"],
+      pillars: [
+        { title: "Otomatisasi Operasional", desc: "Pangkas proses manual & kurangi inefisiensi waktu tim hingga 70%.", icon: RefreshCcw },
+        { title: "Integrasi Terpusat", desc: "Hubungkan data antar departemen dalam satu ekosistem real-time.", icon: Workflow },
+        { title: "Infrastruktur Stabil", desc: "Setup server yang optimal dengan pemeliharaan rutin untuk performa yang andal.", icon: ShieldAlert }
+      ]
     },
-    clients: "Berkolaborasi Dengan Visi-Visi Hebat",
+    clients: {
+      tag: "Mitra Kepercayaan",
+      desc: "Telah diuji dan dipercaya oleh perusahaan skala menengah hingga enterprise dalam mendigitalisasi operasional mereka."
+    },
+    // --- REVISI SERVICES (FOKUS AUTOMATION) ---
     services: {
-      tag: "Layanan Kami",
-      title: "Jasa Pengembangan",
-      titleItalic: "Software.",
-      desc: "Kami fokus pada pengembangan software berdasarkan kebutuhan nyata bisnis, mulai dari website sederhana hingga sistem custom dan aplikasi mobile yang mendukung operasional dan pertumbuhan.",
+      tag: "Ekosistem Layanan",
+      title: "Satu Mitra Untuk",
+      titleItalic: "Semua Kebutuhan IT.",
+      desc: "Kami membagi keahlian kami ke dalam tiga pilar utama. Apapun kebutuhan digital bisnis Anda, kami memiliki tim dan teknologi untuk mengeksekusinya.",
       items: [
-        { title: "Website Basic (Company Profile)", desc: "Pembuatan website company profile, landing page, atau website usaha sederhana yang profesional, cepat, dan mudah dikelola.", icon: Globe },
-        { title: "Website Custom", desc: "Pengembangan website custom sesuai kebutuhan bisnis Anda, termasuk sistem internal, dashboard, dan fitur khusus.", icon: Code },
-        { title: "Mobile App (Android & iOS)", desc: "Pembuatan aplikasi mobile Android dan iOS, baik untuk kebutuhan bisnis, internal perusahaan, maupun produk digital.", icon: Smartphone },
-        { title: "Maintenance & Support", desc: "Layanan perawatan, perbaikan bug, update fitur, dan dukungan teknis untuk website atau aplikasi agar tetap stabil dan aman.", icon: ShieldCheck },
-        { title: "Project Skripsi (Web / App)", desc: "Pengerjaan dan bantuan project skripsi berbasis web atau aplikasi, disesuaikan dengan kebutuhan akademik dan studi kasus.", icon: Layers },
+        {
+          title: "Digital Presence & Bisnis Portal",
+          desc: "Pembuatan Company Profile, Landing Page, dan Portal Bisnis berkinerja tinggi. Kami membangun wajah digital perusahaan Anda agar tampil profesional, cepat, dan meyakinkan di mata mitra korporat.",
+          icon: Globe,
+          priceLabel: "Website Standard",
+          price: "Mulai Dari"
+        },
+        {
+          title: "Custom Software & Automation",
+          desc: "Pengembangan sistem internal kustom, produk SaaS, hingga otomatisasi alur kerja tingkat lanjut. Kami menerjemahkan logika bisnis perusahaan yang rumit menjadi perangkat lunak presisi untuk efisiensi operasional.",
+          icon: Zap,
+          priceLabel: "Sistem Kompleks",
+          price: "Custom Quote"
+        },
+        {
+          title: "Infrastructure & Maintenance",
+          desc: "Anda fokus pada bisnis, kami yang menjaga sistemnya. Meliputi arsitektur server (Cloud/VPS), konfigurasi keamanan, optimasi performa, hingga perawatan rutin agar aplikasi Anda beroperasi tanpa henti.",
+          icon: Cpu,
+          priceLabel: "Dukungan Teknis",
+          price: "Retainer"
+        },
       ],
     },
     process: {
-      tag: "Proses Kerja",
-      title: "Alur Pengerjaan",
-      titleItalic: "Yang Sederhana.",
-      desc: "Kami menggunakan alur kerja yang jelas, transparan, dan terstruktur agar proyek berjalan efisien, terkontrol, dan sesuai kebutuhan bisnis.",
+      tag: "Alur Otomatisasi",
+      title: "4 Langkah Menuju",
+      titleItalic: "Sistem Terintegrasi.",
+      desc: "Proses kerja yang transparan dan terukur. Kami fokus pada penyelesaian masalah operasional Anda tanpa prosedur yang berbelit-belit.",
       steps: [
-        { title: "Diskusi Kebutuhan", desc: "Kami membahas tujuan, fitur, dan ruang lingkup proyek agar kebutuhan Anda jelas sejak awal.", icon: MessageSquare },
-        { title: "Perencanaan", desc: "Kami menyusun gambaran awal seperti alur sistem atau tampilan sebagai acuan pengerjaan.", icon: Search },
-        { title: "Pengembangan", desc: "Proyek dikerjakan sesuai rencana dengan update progres secara berkala.", icon: Zap },
-        { title: "Serah Terima", desc: "Hasil akhir diserahkan dan diuji bersama untuk memastikan semuanya berjalan dengan baik.", icon: ShieldCheck },
+        {
+          title: "1. Menganalisa Masalah",
+          desc: "Kami mempelajari cara kerja tim Anda saat ini. Menemukan proses mana yang lambat, berulang, atau sering terjadi human error akibat pencatatan manual.",
+          icon: Search,
+          highlight: "Audit"
+        },
+        {
+          title: "2. Struktur Ulang Alur",
+          desc: "Merancang ulang alur kerja menjadi lebih efisien. Menentukan bagaimana data harus mengalir otomatis antar departemen agar sistem lebih rapi.",
+          icon: Workflow,
+          highlight: "Design"
+        },
+        {
+          title: "3. Proses Development",
+          desc: "Tim kami mulai menulis kode. Membangun aplikasi kustom yang fungsional, cepat, dan aman, sesuai dengan desain alur yang sudah disepakati.",
+          icon: TerminalSquare,
+          highlight: "Coding"
+        },
+        {
+          title: "4. Sistem Selesai (Go Live)",
+          desc: "Sistem diluncurkan ke server produksi dan siap digunakan. Kami mendampingi tim Anda dalam masa transisi untuk memastikan semuanya berjalan lancar.",
+          icon: RefreshCcw,
+          highlight: "Go Live"
+        },
       ],
       cta: {
-        title: "Siap memulai proyek?",
-        desc: "Sampaikan kebutuhan Anda, kami akan membantu mengerjakannya secara jelas dan terarah.",
-        btn: "Mulai Diskusi"
+        title: "Kapan Anda ingin menghentikan operasional manual?",
+        desc: "Mari mulai dari langkah pertama. Jadwalkan sesi diskusi singkat untuk menganalisa alur kerja bisnis Anda saat ini.",
+        btn: "Mulai Analisa Bisnis"
       }
     },
     footer: {
-      ctaTitle: "Mari buat sesuatu",
-      ctaItalic: "yang bermakna.",
-      ctaBtn: "Hubungi Kami",
-      tagline: "Partner pengembangan software untuk website dan aplikasi yang siap digunakan.",
+      ctaTitle: "Mari bangun sistem",
+      ctaItalic: "yang efisien.",
+      ctaBtn: "Hubungi Tim Ahli",
+      tagline: "Mitra pengembangan software untuk otomatisasi Bisnis dan sistem skala produksi.",
       labels: { connectivity: "Koneksi", channels: "Hubungi Melalui" },
       supportText: {
         line1: "Beroperasi sepenuhnya secara ",
@@ -89,55 +150,100 @@ const content = {
         highlight2: "Surabaya, ID."
       },
       nav: {
-        company: { title: "Navigasi", links: [{ n: "Karya", h: "#services" }, { n: "Tentang Kami", h: "#about" }, { n: "Proses", h: "#process" }] },
+        company: { title: "Navigasi", links: [{ n: "Solusi Otomatisasi", h: "#hero" }, { n: "Layanan Ekosistem", h: "#services" }, { n: "Cara Kerja", h: "#process" }] },
         social: { title: "Ruang Sosial", links: ["LinkedIn", "Instagram", "Twitter X"] }
       }
     }
   },
   en: {
     hero: {
-      badge: "CUSTOM SOFTWARE & INTERNAL SYSTEM",
-      title: "Software Solutions",
-      titleItalic: "That Support Business Growth.",
-      desc: "Indevtech Solutions helps businesses and startups build custom software that is structured, easy to use by teams, and designed for long-term scalability — from web and mobile applications to integrated internal systems.",
-      btns: ["Discuss Project Requirements"]
+      badge: "Business Automation Partner",
+      title: "Automation & Integration",
+      titleItalic: "For Business Scale.",
+      desc: "We engineer custom software ecosystems that transform error-prone manual processes into automated, secure, and scalable workflows. Focus on growth, let the system do the work.",
+      btns: ["Schedule Consultation", "Explore Solutions"],
+      pillars: [
+        { title: "Operational Automation", desc: "Cut manual processes & reduce team time-inefficiency by up to 70%.", icon: RefreshCcw },
+        { title: "Centralized Integration", desc: "Connect data across departments in a single real-time ecosystem.", icon: Workflow },
+        { title: "Stable Infrastructure", desc: "Optimal server setup with routine maintenance for reliable performance.", icon: ShieldAlert }
+      ]
     },
-    clients: "Collaborating With Vision-Driven Clients",
+    clients: {
+      tag: "Trusted Partners",
+      desc: "Tested and trusted by mid-market to enterprise companies in digitalizing their core operations."
+    },
+    // --- REVISI SERVICES (FOKUS AUTOMATION) ---
     services: {
-      tag: "Our Services",
-      title: "Software Development",
-      titleItalic: "Services.",
-      desc: "We focus on software development based on real business needs, ranging from simple websites to custom systems and mobile applications that support operations and drive growth.",
+      tag: "Service Ecosystem",
+      title: "One Partner For",
+      titleItalic: "All Your IT Needs.",
+      desc: "We divide our expertise into three main pillars. Whatever your business's digital needs, we have the team and technology to execute them.",
       items: [
-        { title: "Basic Website (Company Profile)", desc: "Development of company profile websites, landing pages, or simple business websites that are professional, fast, and easy to manage.", icon: Globe },
-        { title: "Custom Website", desc: "Custom website development tailored to your business needs, including internal systems, dashboards, and specific features.", icon: Code },
-        { title: "Mobile App (Android & iOS)", desc: "Mobile application development for Android and iOS, for business needs, internal use, or digital products.", icon: Smartphone },
-        { title: "Maintenance & Support", desc: "Ongoing maintenance, bug fixes, feature updates, and technical support to keep your website or application stable and secure.", icon: ShieldCheck },
-        { title: "Thesis Project (Web / App)", desc: "Development and assistance for academic thesis projects based on web or mobile applications, adjusted to study requirements and case studies.", icon: Layers },
+        {
+          title: "Digital Presence & Business Portals",
+          desc: "Development of high-performance Company Profiles, Landing Pages, and Business Portals. We build your company's digital face to look professional, fast, and credible to your clients and partners.",
+          icon: Globe,
+          priceLabel: "Standard Websites",
+          price: "Starting From"
+        },
+        {
+          title: "Custom Software & Automation",
+          desc: "Development of custom internal systems, SaaS products, and advanced workflow automation. We translate complex business logic into precision software for maximum operational efficiency.",
+          icon: Zap,
+          priceLabel: "Complex Systems",
+          price: "Custom Quote"
+        },
+        {
+          title: "Infrastructure & Maintenance",
+          desc: "You focus on the business, we maintain the systems. Includes server architecture (Cloud/VPS), security configurations, performance optimization, and routine maintenance to keep your applications running seamlessly.",
+          icon: Cpu,
+          priceLabel: "Technical Support",
+          price: "Retainer"
+        },
       ],
     },
     process: {
-      tag: "Process",
-      title: "A Simple",
-      titleItalic: "Workflow.",
-      desc: "We follow a clear and transparent workflow, structured to keep projects efficient, well-managed, and fully aligned with business goals.",
+      tag: "Automation Flow",
+      title: "4 Steps to an",
+      titleItalic: "Integrated System.",
+      desc: "A transparent and measurable workflow. We focus on solving your operational problems without overly complicated procedures.",
       steps: [
-        { title: "Requirements Discussion", desc: "We discuss goals, features, and project scope to ensure everything is clearly defined from the start.", icon: MessageSquare },
-        { title: "Planning", desc: "We prepare initial plans such as system flows or interface outlines as a development reference.", icon: Search },
-        { title: "Development", desc: "The project is developed according to the plan, with regular progress updates.", icon: Zap },
-        { title: "Delivery", desc: "The final product is delivered and reviewed together to ensure everything works as expected.", icon: ShieldCheck },
+        {
+          title: "1. Analyze the Problem",
+          desc: "We study how your team currently works. Identifying which processes are slow, repetitive, or prone to human error due to manual data entry.",
+          icon: Search,
+          highlight: "Audit"
+        },
+        {
+          title: "2. Restructure the Flow",
+          desc: "Redesigning workflows for maximum efficiency. Determining how data should automatically move between departments to keep the system organized.",
+          icon: Workflow,
+          highlight: "Design"
+        },
+        {
+          title: "3. Development Phase",
+          desc: "Our team starts coding. Building a custom, functional, fast, and secure application tailored to the agreed-upon workflow design.",
+          icon: TerminalSquare,
+          highlight: "Coding"
+        },
+        {
+          title: "4. Done & Go Live",
+          desc: "The system is deployed to production servers and ready to use. We guide your team through the transition to ensure everything runs smoothly.",
+          icon: RefreshCcw,
+          highlight: "Go Live"
+        },
       ],
       cta: {
-        title: "Ready to start your project?",
-        desc: "Share your requirements and we’ll help bring them to life with a clear and structured approach.",
-        btn: "Start Discussion"
+        title: "When do you want to stop manual operations?",
+        desc: "Let's start with step one. Schedule a brief discussion to analyze your current business workflows.",
+        btn: "Start Business Analysis"
       }
     },
     footer: {
-      ctaTitle: "Let’s build something",
-      ctaItalic: "meaningful.",
-      ctaBtn: "Contact Us",
-      tagline: "A software development partner for production-ready websites and applications.",
+      ctaTitle: "Let's build an",
+      ctaItalic: "efficient system.",
+      ctaBtn: "Contact Our Experts",
+      tagline: "A software development partner for Bisnis automation and production-scale systems.",
       labels: { connectivity: "Connectivity", channels: "Contact Via" },
       supportText: {
         line1: "Operating fully ",
@@ -146,7 +252,7 @@ const content = {
         highlight2: "Surabaya, ID."
       },
       nav: {
-        company: { title: "Navigation", links: [{ n: "Services", h: "#services" }, { n: "About Us", h: "#about" }, { n: "Process", h: "#process" }] },
+        company: { title: "Navigation", links: [{ n: "Automation Solutions", h: "#hero" }, { n: "Ecosystem Services", h: "#services" }, { n: "How We Work", h: "#process" }] },
         social: { title: "Social", links: ["LinkedIn", "Instagram", "Twitter X"] }
       }
     }
@@ -169,277 +275,304 @@ export default function Home() {
   const handleContact = () => {
     const phone = "6283877995846"
     const message = lang === "id"
-      ? "Halo Indevtech Solutions, saya tertarik untuk mendiskusikan proyek software saya."
-      : "Hello Indevtech Solutions, I am interested in discussing my software project."
+      ? "Halo Indevtech Solutions, saya tertarik untuk mendiskusikan otomatisasi sistem untuk bisnis saya."
+      : "Hello Indevtech Solutions, I am interested in discussing system automation for my business."
     window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, "_blank")
   }
 
-  // SEO Schema
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "Indevtech Solutions",
-    "url": "https://indevtechsolutions.com",
-    "logo": "https://indevtechsolutions.com/logo.png",
-    "description": t.hero.desc,
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Surabaya",
-      "addressCountry": "ID"
-    },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+62-838-7799-5846",
-      "contactType": "customer service"
-    }
-  }
-
   return (
-    <main className="relative min-h-screen bg-background text-foreground selection:bg-primary/30">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-
+    <main className="relative min-h-screen bg-background text-foreground selection:bg-primary/30 font-sans">
       <Navbar lang={lang} setLang={setLang} />
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-6 pt-20">
+      <section id="hero" className="relative min-h-[90vh] flex flex-col items-center justify-center overflow-hidden px-6 pt-32 pb-16">
         <div className="absolute inset-0 z-0" aria-hidden="true">
-          <div className="absolute top-1/4 -left-1/4 w-[600px] h-[600px] bg-primary/20 rounded-full blur-[160px] opacity-50" />
+          <div className="absolute top-1/4 -left-1/4 w-[600px] h-[600px] bg-primary/20 rounded-full blur-[160px] opacity-60" />
+          <div className="absolute bottom-1/4 -right-1/4 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[160px] opacity-40" />
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:60px_60px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_100%)]" />
         </div>
 
-        <motion.div initial="hidden" animate="visible" variants={staggerContainer} className="relative z-10 max-w-6xl text-center space-y-12">
-          <motion.div variants={fadeInUp} className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-[0.2em]">
-            <Rocket className="w-3.5 h-3.5" aria-hidden="true" /> {t.hero.badge}
-          </motion.div>
+        <motion.div initial="hidden" animate="visible" variants={staggerContainer} className="relative z-10 w-full max-w-6xl mx-auto flex flex-col items-center">
+          <div className="text-center space-y-6 mb-10 max-w-4xl mx-auto">
+            <motion.div variants={fadeInUp} className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-[0.2em] backdrop-blur-sm">
+              <Rocket className="w-3.5 h-3.5" aria-hidden="true" /> {t.hero.badge}
+            </motion.div>
 
-          <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-serif leading-[0.95] tracking-tight text-balance">
-            {t.hero.title} <br />
-            <span className="text-primary italic font-light">{t.hero.titleItalic}</span>
-          </h1>
+            <motion.h1 variants={fadeInUp} className="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight leading-[1.05] text-balance">
+              {t.hero.title} <br className="hidden md:block" />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-500">
+                {t.hero.titleItalic}
+              </span>
+            </motion.h1>
 
-          <p className="text-muted-foreground text-lg md:text-2xl max-w-3xl mx-auto font-light leading-relaxed text-balance">
-            {t.hero.desc}
-          </p>
+            <motion.p variants={fadeInUp} className="text-muted-foreground text-lg md:text-xl font-light leading-relaxed text-balance max-w-3xl mx-auto">
+              {t.hero.desc}
+            </motion.p>
 
-          <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row items-center justify-center gap-6 pt-6">
-            <button
-              onClick={handleContact}
-              className="w-full cursor-pointer sm:w-auto px-12 py-6 bg-primary text-primary-foreground rounded-full font-bold text-lg flex items-center justify-center gap-3 hover:scale-105 transition-all shadow-xl shadow-primary/25"
-            >
-              {t.hero.btns[0]} <ArrowRight className="w-5 h-5" aria-hidden="true" />
-            </button>
+            <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+              <button onClick={handleContact} className="w-full sm:w-auto px-8 py-4 bg-foreground text-background rounded-full font-semibold flex items-center justify-center gap-3 hover:bg-primary hover:text-primary-foreground transition-all shadow-xl group">
+                {t.hero.btns[0]} <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </button>
+              <Link href="#services" className="w-full sm:w-auto px-8 py-4 bg-background/50 backdrop-blur-md border border-border text-foreground rounded-full font-semibold flex items-center justify-center hover:border-primary/50 transition-all">
+                {t.hero.btns[1]}
+              </Link>
+            </motion.div>
+          </div>
+
+          <motion.div variants={fadeInUp} className="w-full grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+            {t.hero.pillars.map((pillar, i) => (
+              <div key={i} className="flex items-start gap-4 p-6 rounded-3xl bg-background/40 backdrop-blur-md border border-border/50 hover:bg-background/80 hover:border-primary/30 transition-all">
+                <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center text-primary shrink-0">
+                  <pillar.icon className="w-6 h-6" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-base md:text-lg text-foreground mb-1 tracking-tight">{pillar.title}</h3>
+                  <p className="text-sm text-muted-foreground font-light leading-relaxed">{pillar.desc}</p>
+                </div>
+              </div>
+            ))}
           </motion.div>
         </motion.div>
       </section>
 
-      {/* Clients Marquee - FIXED IMAGE DIMENSIONS */}
-      <section className="py-24 border-y border-border/50 bg-secondary/5 overflow-hidden" aria-label="Clients & Partners">
-        <div className="max-w-7xl mx-auto px-6 mb-12">
-          <p className="text-center text-[10px] font-bold uppercase tracking-[0.5em] text-muted-foreground">
-            {t.clients}
-          </p>
-        </div>
+      {/* Static Clients Grid Section */}
+      <section className="py-24 border-y border-border/40 bg-background/50 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,var(--tw-gradient-stops))] from-secondary/20 via-background to-background -z-10" />
 
-        <div className="relative flex overflow-hidden group">
+        <div className="max-w-7xl mx-auto px-6">
           <motion.div
-            className="flex whitespace-nowrap gap-16 md:gap-24 items-center"
-            animate={{ x: ["0%", "-50%"] }}
-            transition={{ ease: "linear", duration: 25, repeat: Infinity }}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={staggerContainer}
+            className="flex flex-col md:flex-row items-center justify-between gap-12"
           >
-            {[...clientLogos, ...clientLogos, ...clientLogos, ...clientLogos].map((logo, i) => (
-              <div key={i} className="relative shrink-0 w-32 h-12 md:w-40 md:h-16 flex items-center justify-center transition-all duration-500 px-4">
-                <Image
-                  src={logo.url}
-                  alt={`Partner: ${logo.name}`}
-                  width={160} // Set Explicit Width
-                  height={64}  // Set Explicit Height
-                  className="max-w-full max-h-full object-contain pointer-events-none"
-                  loading="lazy"
-                />
+            {/* Left text block */}
+            <motion.div variants={fadeInUp} className="w-full md:w-1/3 text-center md:text-left space-y-4">
+              <div className="inline-flex items-center gap-3">
+                <div className="h-px w-6 bg-primary" />
+                <span className="text-primary text-xs font-bold uppercase tracking-[0.3em]">{t.clients.tag}</span>
               </div>
-            ))}
+              <p className="text-muted-foreground text-sm leading-relaxed font-light">
+                {t.clients.desc}
+              </p>
+            </motion.div>
+
+            {/* Right logos grid */}
+            <motion.div variants={fadeInUp} className="w-full md:w-2/3">
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-12 items-center justify-items-center">
+                {clientLogos.map((logo, i) => (
+                  <div
+                    key={i}
+                    className="relative w-32 h-12 md:w-40 md:h-16 flex items-center justify-center grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500 ease-in-out cursor-default"
+                  >
+                    <Image
+                      src={logo.url}
+                      alt={`Partner: ${logo.name}`}
+                      fill
+                      sizes="(max-width: 768px) 128px, 160px"
+                      className="object-contain"
+                      loading="lazy"
+                    />
+                  </div>
+                ))}
+              </div>
+            </motion.div>
           </motion.div>
-          <div className="pointer-events-none absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-background via-background/80 to-transparent z-10" />
-          <div className="pointer-events-none absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-background via-background/80 to-transparent z-10" />
         </div>
       </section>
 
-      {/* Services Section */}
-      <section id="services" className="py-40 px-6">
+      {/* Services Section (Fokus Otomatisasi) */}
+      <section id="services" className="py-32 px-6">
         <div className="max-w-7xl mx-auto">
-          <motion.header initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeInUp} className="space-y-6 mb-28">
-            <div className="flex items-center gap-4">
-              <div className="h-px w-12 bg-primary" aria-hidden="true" />
+          <motion.header initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeInUp} className="space-y-6 mb-24 text-center">
+            <div className="inline-flex items-center gap-4 justify-center">
+              <div className="h-px w-8 bg-primary" aria-hidden="true" />
               <span className="text-primary text-xs uppercase tracking-[0.4em] font-black">{t.services.tag}</span>
+              <div className="h-px w-8 bg-primary" aria-hidden="true" />
             </div>
-            <h2 className="text-5xl md:text-7xl font-serif leading-[1.1]">
+            <h2 className="text-4xl md:text-6xl font-extrabold tracking-tight leading-[1.1]">
               {t.services.title} <br />
-              <span className="text-primary italic font-light">{t.services.titleItalic}</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-500 font-bold">{t.services.titleItalic}</span>
             </h2>
-            <p className="max-w-prose text-muted-foreground text-xl font-light">{t.services.desc}</p>
+            <p className="max-w-2xl mx-auto text-muted-foreground text-lg md:text-xl font-light">{t.services.desc}</p>
           </motion.header>
 
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={staggerContainer} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={staggerContainer} className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {t.services.items.map((item, i) => (
-              <article key={i} className="group p-12 rounded-[48px] border border-border/60 bg-gradient-to-br from-secondary/30 to-background hover:border-primary/40 transition-all duration-500">
-                <div className="w-20 h-20 rounded-3xl bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-500 mb-10 shadow-inner">
-                  <item.icon className="w-10 h-10" aria-hidden="true" />
+              <article key={i} className="group relative p-10 rounded-[40px] border border-border/80 bg-background hover:bg-secondary/10 hover:border-primary/50 transition-all duration-500 flex flex-col justify-between h-full shadow-sm hover:shadow-2xl hover:shadow-primary/5 cursor-default overflow-hidden">
+                <div className="absolute -inset-4 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 blur-2xl transition-opacity duration-500 -z-10" />
+                <div className="mb-8">
+                  <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-500 mb-8">
+                    <item.icon className="w-8 h-8" aria-hidden="true" />
+                  </div>
+                  <h3 className="text-2xl font-bold mb-4 tracking-tight group-hover:text-primary transition-colors">{item.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed font-light">{item.desc}</p>
                 </div>
-                <h3 className="text-3xl font-semibold mb-6 group-hover:text-primary transition-colors">{item.title}</h3>
-                <p className="max-w-prose text-muted-foreground text-base leading-relaxed font-light">{item.desc}</p>
+                <div className="pt-8 border-t border-border/50 mt-auto flex items-center justify-between">
+                  <span className="text-xs uppercase tracking-wider font-semibold text-muted-foreground group-hover:text-primary/70">{item.priceLabel}</span>
+                  <span className="text-sm font-bold bg-secondary/50 px-3 py-1 rounded-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors">{item.price}</span>
+                </div>
               </article>
             ))}
           </motion.div>
         </div>
       </section>
 
-      {/* Process Section */}
-      <section id="process" className="py-40 px-6 overflow-hidden">
-        <div className="max-w-7xl mx-auto">
-          <motion.header initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="text-center space-y-6 mb-32">
-            <span className="text-primary text-xs uppercase tracking-[0.5em] font-black">{t.process.tag}</span>
-            <h2 className="text-4xl md:text-7xl font-serif leading-tight">
+      {/* --- NEW AUTOMATION PROCESS SECTION --- */}
+      <section id="process" className="py-32 px-6 bg-secondary/5 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[100px] opacity-60 pointer-events-none" />
+
+        <div className="max-w-7xl mx-auto z-10 relative">
+          <motion.header initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeInUp} className="text-center space-y-6 mb-24">
+            <div className="inline-flex items-center gap-4 justify-center">
+              <span className="text-primary text-xs uppercase tracking-[0.4em] font-black bg-primary/10 px-4 py-2 rounded-full">{t.process.tag}</span>
+            </div>
+            <h2 className="text-4xl md:text-6xl font-extrabold tracking-tight leading-tight text-foreground">
               {t.process.title} <br />
-              <span className="text-primary italic font-light">{t.process.titleItalic}</span>
+              <span className="text-primary font-bold">{t.process.titleItalic}</span>
             </h2>
-            <p className="max-w-prose text-muted-foreground text-xl mx-auto font-light">{t.process.desc}</p>
+            <p className="max-w-2xl text-muted-foreground text-lg md:text-xl mx-auto font-light leading-relaxed">{t.process.desc}</p>
           </motion.header>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
-            <div className="hidden lg:block absolute top-1/2 left-0 w-full h-px bg-border -z-10" aria-hidden="true" />
-            {t.process.steps.map((step, i) => (
-              <motion.div key={i} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="relative h-full">
-                <div className="bg-background border border-border p-10 rounded-[40px] space-y-8 hover:border-primary/40 transition-all duration-500 hover:shadow-2xl h-full flex flex-col justify-between group">
-                  <div className="flex justify-between items-start">
-                    <div className="text-xl font-serif italic text-primary/20 group-hover:text-primary transition-colors">0{i + 1}</div>
-                    <div className="w-12 h-12 rounded-2xl bg-secondary/50 flex items-center justify-center border border-border group-hover:bg-primary group-hover:text-primary-foreground transition-all">
-                      <step.icon className="w-5 h-5" aria-hidden="true" />
+          {/* Connected Nodes Layout */}
+          <div className="relative mb-32">
+            {/* Horizontal Line connecting nodes (Hidden on mobile) */}
+            <div className="hidden lg:block absolute top-12 left-[10%] right-[10%] h-0.5 bg-gradient-to-r from-primary/10 via-primary/50 to-primary/10 z-0" aria-hidden="true" />
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10">
+              {t.process.steps.map((step, i) => (
+                <motion.div
+                  key={i}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, margin: "-50px" }}
+                  variants={fadeInUp}
+                  className="relative group"
+                >
+                  <div className="flex flex-col items-center text-center space-y-6">
+
+                    {/* Icon Node */}
+                    <div className="relative w-24 h-24 rounded-3xl bg-background border-2 border-border flex items-center justify-center shadow-lg group-hover:border-primary group-hover:shadow-primary/20 transition-all duration-500">
+                      <step.icon className="w-10 h-10 text-primary group-hover:scale-110 transition-transform duration-500" />
+                      {/* Number Badge */}
+                      <div className="absolute -top-3 -right-3 w-8 h-8 rounded-full bg-primary text-primary-foreground font-bold text-sm flex items-center justify-center shadow-md">
+                        {i + 1}
+                      </div>
                     </div>
+
+                    {/* Arrow for Mobile (Between steps) */}
+                    {i !== t.process.steps.length - 1 && (
+                      <div className="lg:hidden text-primary/30">
+                        <ArrowRight className="w-6 h-6 rotate-90" />
+                      </div>
+                    )}
+
+                    {/* Content */}
+                    <div className="bg-background p-6 rounded-3xl border border-border/50 shadow-sm h-full group-hover:bg-secondary/10 transition-colors duration-300">
+                      <span className="text-[10px] font-bold uppercase tracking-widest text-primary/70 mb-3 block">
+                        {step.highlight}
+                      </span>
+                      <h3 className="text-xl font-bold mb-3 text-foreground tracking-tight">{step.title}</h3>
+                      <p className="text-muted-foreground font-light leading-relaxed text-sm">{step.desc}</p>
+                    </div>
+
                   </div>
-                  <div className="space-y-4">
-                    {/* FIXED: H4 changed to H3 for semantic order */}
-                    <h3 className="text-2xl font-serif">{step.title}</h3>
-                    <p className="max-w-prose text-muted-foreground font-light leading-relaxed text-sm">{step.desc}</p>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
+                </motion.div>
+              ))}
+            </div>
           </div>
 
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="mt-32 p-12 md:p-20 rounded-[60px] bg-primary text-primary-foreground text-center space-y-8 shadow-2xl">
-            <h3 className="text-3xl md:text-5xl font-semibold max-w-3xl mx-auto">{t.process.cta.title}</h3>
-            <p className="max-w-prose text-primary-foreground/80 text-lg mx-auto font-light">{t.process.cta.desc}</p>
-            <button
-              onClick={handleContact}
-              className="px-10 py-5 bg-background text-foreground rounded-full font-bold hover:scale-105 transition-all shadow-xl"
-            >
-              {t.process.cta.btn}
-            </button>
+          {/* CTA Box inside Process */}
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="max-w-4xl mx-auto p-10 md:p-14 rounded-[40px] bg-foreground text-background shadow-2xl text-center space-y-8 relative overflow-hidden">
+            {/* Decorative pattern */}
+            <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff10_1px,transparent_1px),linear-gradient(to_bottom,#ffffff10_1px,transparent_1px)] bg-[size:32px_32px] opacity-20" />
+
+            <div className="relative z-10">
+              <h3 className="text-2xl md:text-4xl font-bold max-w-2xl mx-auto mb-4">{t.process.cta.title}</h3>
+              <p className="text-background/70 text-lg mx-auto font-light max-w-2xl mb-8">{t.process.cta.desc}</p>
+              <button
+                onClick={handleContact}
+                className="px-8 py-4 bg-primary text-primary-foreground rounded-full font-bold hover:scale-105 transition-transform shadow-xl shadow-primary/20 flex items-center justify-center gap-3 mx-auto group"
+              >
+                {t.process.cta.btn}
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </button>
+            </div>
           </motion.div>
+
         </div>
       </section>
+      {/* ------------------------------------------- */}
 
       {/* Footer */}
-      <footer id="contact" className="pt-40 pb-20 px-6 border-t border-border/50">
+      <footer id="contact" className="pt-20 pb-10 px-6">
         <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-32 mb-40">
-            <div className="space-y-12">
-              <h2 className="text-6xl md:text-8xl font-serif leading-[0.9] tracking-tighter">
-                {t.footer.ctaTitle} <br /><span className="text-primary italic font-light">{t.footer.ctaItalic}</span>
+          <div className="grid lg:grid-cols-2 gap-20 mb-32 items-center">
+            <div className="space-y-8">
+              <h2 className="text-5xl md:text-7xl font-extrabold leading-[1] tracking-tight">
+                {t.footer.ctaTitle} <br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-500">{t.footer.ctaItalic}</span>
               </h2>
               <button
                 onClick={handleContact}
-                className="inline-flex group px-10 py-5 bg-primary text-primary-foreground rounded-full font-bold items-center gap-3 hover:pr-12 transition-all shadow-2xl"
+                className="inline-flex group px-8 py-4 bg-foreground text-background hover:bg-primary hover:text-primary-foreground rounded-full font-bold items-center gap-3 hover:pr-10 transition-all shadow-xl"
               >
                 {t.footer.ctaBtn} <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" aria-hidden="true" />
               </button>
             </div>
 
             <div className="grid sm:grid-cols-2 gap-6">
-              <div className="group relative p-8 rounded-[32px] bg-secondary/5 border border-border/50 hover:border-primary/30 transition-all duration-500 space-y-8 flex flex-col justify-between overflow-hidden">
-                <div className="relative space-y-6">
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-2xl bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
-                      <Globe className="w-5 h-5" aria-hidden="true" />
-                    </div>
-                    <span className="text-primary uppercase tracking-[0.3em] font-black text-[10px]">{t.footer.labels.connectivity}</span>
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-serif mb-2">Digital Support</h3>
-                    <p className="text-muted-foreground font-light leading-relaxed">
-                      {t.footer.supportText.line1}
-                      <span className="font-medium text-foreground">{t.footer.supportText.highlight1}</span>
-                      {t.footer.supportText.line2}
-                      <span className="font-medium text-primary/80">{t.footer.supportText.highlight2}</span>
-                    </p>
-                  </div>
+              <div className="group relative p-8 rounded-3xl bg-secondary/20 border border-border/50 hover:border-primary/30 transition-all duration-500">
+                <div className="flex items-center gap-3 mb-6">
+                  <Globe className="w-5 h-5 text-primary" aria-hidden="true" />
+                  <span className="uppercase tracking-[0.2em] font-bold text-[10px] text-muted-foreground">{t.footer.labels.connectivity}</span>
                 </div>
+                <h3 className="text-xl font-bold mb-2">Digital Support</h3>
+                <p className="text-muted-foreground text-sm font-light leading-relaxed">
+                  {t.footer.supportText.line1}
+                  <span className="font-semibold text-foreground">{t.footer.supportText.highlight1}</span>
+                  {t.footer.supportText.line2}
+                  <span className="font-semibold text-primary">{t.footer.supportText.highlight2}</span>
+                </p>
               </div>
 
-              <div className="group relative p-8 rounded-[32px] bg-primary text-primary-foreground shadow-2xl hover:-translate-y-2 transition-all duration-500 flex flex-col justify-between overflow-hidden border border-white/5">
-                <div className="relative space-y-8">
-                  {/* Header Section */}
-                  <div className="flex items-center gap-4 border-b border-white/10 pb-6">
-                    <div className="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center text-white transition-all group-hover:scale-110 group-hover:bg-white/20">
-                      <Mail className="w-6 h-6" aria-hidden="true" />
-                    </div>
-                    <div className="flex flex-col">
-                      <span className="uppercase tracking-[0.2em] font-bold text-[10px] text-white/50 leading-none">
-                        {t.footer.labels.channels}
-                      </span>
-                      <span className="text-sm font-medium text-white/80">Get in touch</span>
-                    </div>
-                  </div>
-
-                  {/* Contact Info Section */}
-                  <div className="space-y-6">
-                    <div className="space-y-2">
-                      <a
-                        href="mailto:hello@indevtechsolutions.com"
-                        className="block text-xl md:text-2xl font-semibold tracking-tight hover:text-white transition-colors break-all underline-offset-8 hover:underline decoration-white/20"
-                      >
-                        indevtechsolutions@gmail.com
-                      </a>
-                    </div>
-
-                    <button
-                      onClick={handleContact}
-                      className="inline-flex items-center gap-3 px-5 py-2.5 bg-white/10 rounded-full text-sm font-semibold hover:bg-white hover:text-primary transition-all duration-300 group/btn"
-                    >
-                      <span className="relative flex h-2 w-2">
-                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                        <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
-                      </span>
-                      <span className="tracking-wide">+62 838-7799-5846</span>
-                    </button>
-                  </div>
+              <div className="group relative p-8 rounded-3xl bg-primary text-primary-foreground shadow-xl hover:-translate-y-2 transition-transform duration-500">
+                <div className="flex items-center gap-3 mb-6">
+                  <Mail className="w-5 h-5 text-primary-foreground/70" aria-hidden="true" />
+                  <span className="uppercase tracking-[0.2em] font-bold text-[10px] text-primary-foreground/70">{t.footer.labels.channels}</span>
                 </div>
+                <a href="mailto:hello@indevtechsolutions.com" className="block text-lg font-semibold mb-4 hover:underline decoration-white/30 underline-offset-4 break-all">
+                  indevtechsolutions@gmail.com
+                </a>
+                <button onClick={handleContact} className="inline-flex items-center gap-2 px-4 py-2 bg-background/10 hover:bg-background hover:text-primary rounded-full text-sm font-semibold transition-colors">
+                  <span className="relative flex h-2 w-2">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                  </span>
+                  +62 838-7799-5846
+                </button>
               </div>
             </div>
           </div>
 
-          <div className="flex flex-col md:flex-row justify-between pt-20 border-t border-border gap-16">
-            <div className="space-y-8 max-w-sm">
-              <Link href="/" className="text-4xl font-serif font-bold tracking-tighter">IndevTech Solutions<span className="text-primary italic">.</span></Link>
-              <p className="max-w-prose text-muted-foreground font-light">{t.footer.tagline}</p>
-              {/* FIXED: Removed /60 for better color contrast accessibility */}
-              <p className="text-[10px] uppercase tracking-widest text-muted-foreground font-bold">© 2025 Indev Tech Solutions. All Rights Reserved.</p>
+          <div className="flex flex-col md:flex-row justify-between pt-12 border-t border-border/60 gap-12">
+            <div className="space-y-6 max-w-xs">
+              <Link href="/" className="text-2xl font-extrabold tracking-tight">IndevTech<span className="text-primary">.</span></Link>
+              <p className="text-muted-foreground font-light text-sm">{t.footer.tagline}</p>
+              <p className="text-[10px] uppercase tracking-wider text-muted-foreground font-semibold">© 2026 IndevTech Solutions.</p>
             </div>
 
-            <nav className="grid grid-cols-2 gap-20" aria-label="Footer Navigation">
+            <nav className="flex gap-16" aria-label="Footer Navigation">
               {Object.entries(t.footer.nav).map(([key, nav]: any) => (
-                <div key={key} className="space-y-8">
-                  <p className="font-bold text-xs uppercase tracking-[0.3em]">{nav.title}</p>
-                  <ul className="space-y-4 text-muted-foreground">
+                <div key={key} className="space-y-6">
+                  <p className="font-bold text-xs uppercase tracking-[0.2em] text-foreground">{nav.title}</p>
+                  <ul className="space-y-3 text-sm text-muted-foreground font-light">
                     {nav.links.map((link: any, i: number) => (
                       <li key={i}>
                         {link.h ? (
                           <Link href={link.h} className="hover:text-primary transition-colors">{link.n}</Link>
                         ) : (
-                          <span className="cursor-default">{link}</span>
+                          <span className="cursor-default hover:text-foreground transition-colors">{link}</span>
                         )}
                       </li>
                     ))}
@@ -459,10 +592,10 @@ export default function Home() {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.5, y: 20 }}
             onClick={scrollToTop}
-            className="fixed bottom-8 right-8 z-50 w-14 h-14 cursor-pointer bg-primary text-primary-foreground rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform"
+            className="fixed bottom-8 right-8 z-50 w-12 h-12 bg-foreground text-background rounded-full flex items-center justify-center shadow-2xl hover:bg-primary hover:text-primary-foreground hover:scale-110 transition-all"
             aria-label="Back to Top"
           >
-            <ChevronUp className="w-6 h-6" aria-hidden="true" />
+            <ChevronUp className="w-5 h-5" aria-hidden="true" />
           </motion.button>
         )}
       </AnimatePresence>

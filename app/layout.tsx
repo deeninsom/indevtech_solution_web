@@ -19,23 +19,22 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   metadataBase: new URL("https://indevtechsolutions.com"),
   title: {
-    default: "Indevtech Solutions | Custom Software & Digital Product Development",
+    default: "Indevtech Solutions | Business Automation Partner",
     template: "%s | Indevtech Solutions",
   },
   description:
-    "Indevtech Solutions adalah partner global dalam pengembangan software custom, website profesional, dan desain produk digital berkualitas tinggi untuk transformasi bisnis.",
+    "Indevtech Solutions adalah Business Automation Partner Anda. Kami membedah masalah operasional bisnis dan merancang ekosistem software kustom untuk mengotomatisasi alur kerja Anda.",
   keywords: [
     "Indevtech",
-    "indevtech",
-    "indev",
     "Indevtech Solutions",
-    "indevtech solutions",
+    "Business Automation",
+    "Otomatisasi Bisnis",
+    "Otomatisasi Sistem",
+    "Sistem Internal Custom",
     "Pengembangan Software Custom",
-    "Website Profesional",
-    "Desain Produk Digital",
-    "Digital Product Development",
-    "Web Development Indonesia",
-    "Custom Software Solutions"
+    "Workflow Automation",
+    "B2B Software Partner",
+    "SaaS Development Indonesia"
   ],
   authors: [{ name: "Indevtech Solutions" }],
   creator: "Indevtech Solutions",
@@ -66,9 +65,9 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "Indevtech Solutions - Custom Software & Digital Product",
+    title: "Indevtech Solutions - Business Automation Partner",
     description:
-      "Partner global untuk pengembangan software custom, website, dan desain produk digital berkualitas tinggi.",
+      "Partner teknologi Anda untuk otomatisasi bisnis. Kami mengubah operasional manual menjadi ekosistem software yang bekerja otomatis dan terintegrasi.",
     url: "https://indevtechsolutions.com",
     siteName: "Indevtech Solutions",
     images: [
@@ -76,7 +75,7 @@ export const metadata: Metadata = {
         url: "/logo-thumbnail.png",
         width: 1200,
         height: 630,
-        alt: "Indevtech Solutions - Digital Innovation",
+        alt: "Indevtech Solutions - Business Automation",
       },
     ],
     locale: "id_ID",
@@ -85,8 +84,8 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Indevtech Solutions - Custom Software & Digital Product",
-    description: "Pengembangan software custom dan website profesional dengan standar kualitas tinggi.",
+    title: "Indevtech Solutions - Business Automation Partner",
+    description: "Mengubah kekacauan operasional manual menjadi sistem otomatis yang presisi dan efisien.",
     images: ["/logo-web.png"],
   },
 
