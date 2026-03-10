@@ -10,7 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
-      url: `${baseUrl}/portfolio`,
+      url: `${baseUrl}/portofolio`,
       lastModified,
       priority: 0.8,
     }

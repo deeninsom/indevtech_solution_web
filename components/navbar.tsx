@@ -94,7 +94,7 @@ export function Navbar({ lang, setLang }: NavbarProps) {
           <div className="flex items-center gap-6">
             {[
               { n: t.services, h: "/#services" },
-              { n: t.portfolio, h: "/portfolio" },
+              { n: t.portfolio, h: "/portofolio" },
               { n: t.process, h: "/#process" },
               // { n: t.about, h: "/#about" }
               // { n: t.contact, h: "/#contact" }
