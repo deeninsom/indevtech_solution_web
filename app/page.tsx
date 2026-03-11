@@ -52,6 +52,8 @@ const clientLogos = [
   { name: "PT Maju Inspirasi Bangsa", url: "/partners/logo-abevent.png" }
 ];
 
+const scrollingLogos = [...clientLogos, ...clientLogos];
+
 const content = {
   id: {
     hero: {
@@ -68,7 +70,10 @@ const content = {
     },
     clients: {
       tag: "Mitra Kepercayaan",
-      desc: "Telah diuji dan dipercaya oleh perusahaan skala menengah hingga enterprise dalam mendigitalisasi operasional mereka."
+      title: "Dipercaya oleh ",
+      titleHighlight: "berbagai brand / industri.",
+      desc: "Telah diuji dan dipercaya oleh perusahaan skala menengah hingga enterprise dalam mendigitalisasi operasional mereka.",
+      placeholder: "Proyek Selanjutnya" // <-- Tambahan baru
     },
     // --- REVISI SERVICES (FOKUS AUTOMATION) ---
     services: {
@@ -170,7 +175,10 @@ const content = {
     },
     clients: {
       tag: "Trusted Partners",
-      desc: "Tested and trusted by mid-market to enterprise companies in digitalizing their core operations."
+      title: "Trusted by ",
+      titleHighlight: "various brands / industries.",
+      desc: "Tested and trusted by mid-market to enterprise companies in digitalizing their core operations.",
+      placeholder: "Next Project" // <-- Tambahan baru
     },
     // --- REVISI SERVICES (FOKUS AUTOMATION) ---
     services: {
@@ -335,50 +343,107 @@ export default function Home() {
         </motion.div>
       </section>
 
-      {/* Static Clients Grid Section */}
+      {/* Interactive Floating Clients Section */}
       <section className="py-24 border-y border-border/40 bg-background/50 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,var(--tw-gradient-stops))] from-secondary/20 via-background to-background -z-10" />
+        {/* Background Decoration */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(60%_50%_at_50%_0%,#3b82f610_0%,transparent_100%)]" />
 
-        <div className="max-w-7xl mx-auto px-6">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            variants={staggerContainer}
-            className="flex flex-col md:flex-row items-center justify-between gap-12"
-          >
-            {/* Left text block */}
-            <motion.div variants={fadeInUp} className="w-full md:w-1/3 text-center md:text-left space-y-4">
-              <div className="inline-flex items-center gap-3">
-                <div className="h-px w-6 bg-primary" />
-                <span className="text-primary text-xs font-bold uppercase tracking-[0.3em]">{t.clients.tag}</span>
+        <div className="max-w-7xl mx-auto px-6 relative z-10">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-16">
+
+            {/* Left Side: Text Content (TETAP SAMA) */}
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fadeInUp}
+              className="w-full lg:w-1/3 text-center lg:text-left space-y-6"
+            >
+              <div className="inline-flex items-center gap-3 px-4 py-1.5 rounded-full bg-primary/5 border border-primary/10">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+                </span>
+                <span className="text-primary text-[10px] font-black uppercase tracking-[0.2em]">{t.clients.tag}</span>
               </div>
-              <p className="text-muted-foreground text-sm leading-relaxed font-light">
+              <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground leading-tight">
+                {t.clients.title} <span className="text-primary underline decoration-primary/20 underline-offset-8">{t.clients.titleHighlight}</span>
+              </h2>
+              <p className="text-muted-foreground text-sm md:text-base font-light leading-relaxed">
                 {t.clients.desc}
               </p>
             </motion.div>
 
-            {/* Right logos grid */}
-            <motion.div variants={fadeInUp} className="w-full md:w-2/3">
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-12 items-center justify-items-center">
-                {clientLogos.map((logo, i) => (
-                  <div
-                    key={i}
-                    className="relative w-32 h-12 md:w-40 md:h-16 flex items-center justify-center grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500 ease-in-out cursor-default"
-                  >
+            {/* Right Side: Floating Interactive Logos (CARD BERUBAH) */}
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={staggerContainer}
+              className="w-full lg:w-3/5 grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6"
+            >
+              {clientLogos.map((logo, i) => (
+                <motion.div
+                  key={i}
+                  variants={fadeInUp}
+                  // --- ANIMASI ACAK DINAMIS (TETAP SAMA) ---
+                  animate={{
+                    y: [0, i % 2 === 0 ? -12 : 12, 0],
+                    rotate: [0, i % 2 === 0 ? 1 : -1, 0],
+                  }}
+                  transition={{
+                    duration: 4 + (i % 3),
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  }}
+                  whileHover={{
+                    scale: 1.05,
+                    y: -5,
+                    rotate: 0,
+                    zIndex: 20,
+                    transition: { duration: 0.2 }
+                  }}
+                  className={`
+              relative group flex items-center justify-center p-6 md:p-8 rounded-2xl 
+              bg-gradient-to-b from-background/80 to-background/40 backdrop-blur-md
+              border border-border/40 shadow-[0_4px_20px_-10px_rgba(0,0,0,0.05)]
+              hover:border-primary/50 hover:bg-background/90
+              hover:shadow-[0_0_30px_-5px_rgba(59,130,246,0.15)]
+              transition-all duration-500 overflow-hidden
+              ${i === 1 ? 'md:mt-10' : ''} ${i === 4 ? 'md:-mt-10' : ''} 
+            `}
+                >
+                  {/* NEW: Top Dynamic Highlight Line */}
+                  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-gradient-to-r from-transparent via-primary to-transparent group-hover:w-full transition-all duration-700 ease-out" />
+
+                  {/* NEW: Inner Ambient Glow */}
+                  <div className="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-2xl rounded-full scale-150 pointer-events-none" />
+
+                  {/* Logo Image */}
+                  <div className="relative w-full aspect-[3/1] grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500 z-10">
                     <Image
                       src={logo.url}
                       alt={`Partner: ${logo.name}`}
                       fill
-                      sizes="(max-width: 768px) 128px, 160px"
                       className="object-contain"
                       loading="lazy"
                     />
                   </div>
-                ))}
-              </div>
+                </motion.div>
+              ))}
+
+              {/* Placeholder/Empty Card with Dash (DISESUAIKAN DENGAN TEMA BARU) */}
+              <motion.div
+                animate={{ y: [0, 8, 0] }}
+                transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+                className="hidden md:flex relative group items-center justify-center p-8 rounded-2xl border border-dashed border-border/50 bg-background/20 backdrop-blur-sm opacity-40 hover:opacity-100 transition-opacity duration-300 cursor-default"
+              >
+                <div className="absolute inset-0 bg-border/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
+                <span className="relative text-[10px] font-bold uppercase tracking-widest text-muted-foreground group-hover:text-foreground transition-colors">Next Project</span>
+              </motion.div>
             </motion.div>
-          </motion.div>
+
+          </div>
         </div>
       </section>
 
