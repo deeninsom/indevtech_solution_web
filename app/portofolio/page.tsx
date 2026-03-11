@@ -127,7 +127,7 @@ export default function portofolioPage() {
         : "A platform representing high-tech solutions (PLC, HMI, SCADA, AGV). We ensured the website architecture reflects the operational efficiency the client offers to its customers.",
       year: "2026",
       image: "/portofolio/mockup-yama.png",
-      url: "https://yamaelectricalcom/",
+      url: "https://yamaelectrical.com/",
     }
   ]
 
