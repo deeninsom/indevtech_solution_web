@@ -106,6 +106,22 @@ export default function RootLayout({
           name="google-site-verification"
           content="u-J4nkwlrW-6NQ7STPbqvQgTqKYuHBjHCZDUdn3TOpk"
         />
+        <link rel="icon" href="/favicon.ico" />
+        <meta name="description" content="Partner teknologi Anda untuk otomatisasi bisnis. Kami mengubah operasional manual menjadi ekosistem software yang bekerja otomatis dan terintegrasi." />
+        <meta property="name" content="Indevtech Solutions - Business Automation Partner" />
+        <meta property="description" content="Partner teknologi Anda untuk otomatisasi bisnis. Kami mengubah operasional manual menjadi ekosistem software yang bekerja otomatis dan terintegrasi." />
+        <meta property="og:image" content="https://indevtechsolutions.com/logo-thumbnail.png" />
+        <link rel="canonical" href="https://indevtechsolutions.com" />
+        <meta property="og:url" content="https://indevtechsolutions.com" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Indevtech Solutions - Business Automation Partner" />
+        <meta property="og:description" content="Partner teknologi Anda untuk otomatisasi bisnis. Kami mengubah operasional manual menjadi ekosistem software yang bekerja otomatis dan terintegrasi." />
+        <meta property="og:image" content="https://indevtechsolutions.com/logo-thumbnail.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Indevtech Solutions - Business Automation Partner" />
+        <meta name="twitter:description" content="Partner teknologi Anda untuk otomatisasi bisnis. Kami mengubah operasional manual menjadi ekosistem software yang bekerja otomatis dan terintegrasi." />
+        <meta name="twitter:image" content="https://indevtechsolutions.com/logo-thumbnail.png" />
+
       </head>
       <body className="font-sans antialiased bg-background text-foreground selection:bg-primary selection:text-primary-foreground">
         {children}
