@@ -45,6 +45,7 @@ const staggerContainer: Variants = {
 
 // --- Data ---
 const clientLogos = [
+  { name: "Woodolio Kitchen", url: "/partners/logo-woodelio.png" },
   { name: "PT Wibawa Jati Putra", url: "/partners/logo-wjp.png" },
   { name: "PT New Star Asia", url: "/partners/logo-newfei.png" },
   { name: "PT Yama Electrical Support", url: "/partners/logo-yama.png" },

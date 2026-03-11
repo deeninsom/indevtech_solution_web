@@ -65,7 +65,18 @@ export default function portofolioPage() {
   const projects = [
     {
       id: 1,
-      title: "PT Wibawa Jati Putra",
+      title: "Woodelio Kitchen",
+      type: "Corporate Web Portal",
+      desc: lang === "id"
+        ? "Spesialis Kitchen Set Berkualitas Tinggi dengan Harga Rasional"
+        : "Specialized in high-quality kitchen sets with competitive prices.",
+      year: "2025",
+      image: "/portofolio/mockup-woodelio.png",
+      url: "https://customkitchenbandung.com/",
+    },
+    {
+      id: 2,
+      title: "PT New Star Asia",
       type: "Corporate Web Portal",
       desc: lang === "id"
         ? "Mendigitalisasi kehadiran B2B untuk penyedia jasa konstruksi dan perawatan mesin industri. Dibangun untuk meningkatkan kepercayaan mitra dan kelancaran informasi profil (general supplies)."
@@ -75,7 +86,7 @@ export default function portofolioPage() {
       url: "https://wibawajatiputra.com",
     },
     {
-      id: 2,
+      id: 3,
       title: "PT New Star Asia",
       type: "Company Profile System",
       desc: lang === "id"
@@ -86,7 +97,7 @@ export default function portofolioPage() {
       url: "https://newfeiofficial.com",
     },
     {
-      id: 3,
+      id: 4,
       title: "PT Mitrakon Persada Abadi",
       type: "Business Profile & Infrastructure",
       desc: lang === "id"
@@ -97,7 +108,7 @@ export default function portofolioPage() {
       url: "https://mitrakon.co.id",
     },
     {
-      id: 4,
+      id: 5,
       title: "PT Maju Inspirasi Bangsa",
       type: "Digital Presence",
       desc: lang === "id"
@@ -108,7 +119,7 @@ export default function portofolioPage() {
       url: "https://abeventorg.com/",
     },
     {
-      id: 5, // Perbaikan ID duplikat
+      id: 6, // Perbaikan ID duplikat
       title: "PT Yama Electrical Support",
       type: "Industrial Tech Portal",
       desc: lang === "id"
